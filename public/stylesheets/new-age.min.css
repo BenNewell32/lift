@@ -128,9 +128,37 @@ header.masthead{position:relative;width:100%;padding-top:150px;
     font-weight: bold;
 }
 
+@media only screen and (max-width: 600px) {
+    #title {
+        font-family: 'Raleway', sans-serif;
+        color:white;
+        font-size: 10vw;
+        font-weight: bold;
+    }
+
+    #titleSubTop{
+        font-family: 'Raleway', sans-serif;
+        color:white;
+        font-size: 5vw;
+    }
+}
+
 #titleSubTop{
     font-family: 'Raleway', sans-serif;
     color:white;
+}
+
+#titleSub2{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    text-align: left;
+}
+
+#titleSub2Sub{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    text-align: left;
+    font-size: 15px;
 }
 
 #intro{
@@ -151,9 +179,12 @@ header.masthead{position:relative;width:100%;padding-top:150px;
     /* height: 100vh; */
     background-size: cover;
 }
-#personal{
+#about{
     /* height: 100vh; */
     background-size: cover;
+    align-content: center;
+    justify-content: center;
+    background-image:url('../images/teamlift.png');
 }
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {
