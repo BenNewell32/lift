@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bens.Work</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+  <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/new-age.min.css" rel="stylesheet">
+  </head>
+  <body id='home'>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <img src="../images/LiftLogo.png" alt="">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/projects" style='font-weight: bold; color:#1F7FC3; font-size: 15px;'>HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" style='font-size: 15px;' href="/projects">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" style='font-size: 15px;'  href="/api">Web Dev</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" style='font-size: 15px;' href="/api">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" style='font-size: 15px;' href="/api">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <canvas  id='introCanvas' style=''>
+    </canvas>
+    <section class='fade-scroll' display='block' id='intro'>
+      <div style='justify-content: center' class="container">
+        <div style='justify-content: center;' class="row">
+        </div>
+        <br>
+        <div>
+          <h1 id='title' style='color: #1B1B1E'>
+            YOUR
+            <br>
+            INSIGHTS
+          </h1>
+          <h1 id='title'>
+            DELIVERING
+            <br>
+            RESULTS
+          </h1>
+          <h3 id='titleSubTop'>
+            MISSION | PROVIDE LIFT<br><br>
+          </h3>
+          </dir>
+          <div href='#webdev' style='justify-content: center;' class='row'>
+              <span class="fa-stack fa-3x">
+                <i  class="fa fa-chevron-down fa-stack-1x"></i>
+              </span>
+          </div>
+        </div>
+        <br>
+        <div style='justify-content: center' class="row">
+          <div class="col-4">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div style='border-top: solid; border-color: white;'>
+    </div>
+    <footer>     
+      <div class="container">
+        <p>&copy; Created by Ben Newell. All Rights Reserved.</p>
+        <ul class="list-inline list-social">
+          <li class="list-inline-item social-twitter">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-facebook">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-google-plus">
+            <a href="#">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="javascripts/new-age.min.js"></script>
+    <script src="javascripts/canvas.js"></script>
+    <script src="javascripts/fullStackCanvas.js"></script>
+    {{!-- <script src="javascripts/getImages.js"></script> --}}
+
+    <!-- Check images before project page gets rendered! -->
+    <script>
+      feather.replace()
+    </script>
+    <script class="js">
+      function hide(){
+        document.getElementById("intro").setAttribute("display", "none");
+      }
+    </script>
+    <script class="js">
+      function fade(){
+        var documentv = $(document),
+            fadeElement = $('.fade-scroll');
+                document.on('scroll', function (){
+          var currentScrollPosition = documentv.scrollTop();
+          fadeElement.each(function(){
+            var $this = $(this),
+                elementOffsetTop = $this.offset().top;
+            if (currentScrollPosition > elementOffsetTop){
+            $this.css('opacity', 1-(currentScrollPosition-elementOffsetTop)/400)
+            }
+          })
+        })
+
+      }
+    </script>
+
+  </body>
+
+</html>
+
+{{!-- Save for refrence --}}
+
+    {{!-- <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto"> --}}
+              {{!-- <img class="img-circle" src="https://media.licdn.com/dms/image/C5603AQH3bf6tVzfzDA/profile-displayphoto-shrink_200_200/0?e=1535587200&v=beta&t=Uu8k1tREG6TC4vTSwdXqjckCXa0Jp49KqSpe00IFujU" alt=""></img>
+              <div class="social">
+                <br>
+                <a style='color: rgba(246, 248, 250, 0.644)' href="https://www.linkedin.com/in/ben-newell-mba/"><i id="linkedin" class="fa fa-3x fa-linkedin"></i></a>
+                <a style='color: rgba(246, 248, 250, 0.644)' href="https://github.com/BenNewell32"><i id="github" class="fa fa-3x fa-github"></i></a>
+                <a style='color: rgba(246, 248, 250, 0.644)' href=""><i id="twitter" class="fa fa-3x fa-twitch"></i></a>
+                <a style='color: rgba(246, 248, 250, 0.644)' href="mailto:ben.m.newell@gmail.com"><i id="mail" class="fa fa-3x fa-envelope "></i></a>
+              </div> --}}
+            {{!-- </div>
+          </div>
+        </div>
+      </div> --}}
+    {{!-- </header> --}}
