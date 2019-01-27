@@ -55,8 +55,6 @@
         </div>
       </div>
     </nav>
-    <canvas  id='introCanvas' style=''>
-    </canvas>
     <section class='fade-scroll' display='block' id='intro'>
       <div style='justify-content: center' class="container">
         <div style='justify-content: center;' class="row">
@@ -81,16 +79,15 @@
             MISSION | PROVIDE LIFT<br><br>
           </h3>
           <div class='row'>
+            <button onClick='showNewToAnalytics()'style="font-size: 12px" type="button" class="btn btn-light">New to Data/Analytics?</button>
+          </div>
+          <div class='row' style='height: 10px'>
+          </div>
+          <div class='row'>
             <button style="color: rgb(46, 185, 46)" type="button" class="btn btn-light">Tableau</button>
           <div style='width: 10px'>
           </div>
             <button style="color: red" type="button" class="btn btn-dark">Oracle</button>
-          </div>
-          <div class='row' style='height: 10px'>
-
-          </div>
-          <div class='row'>
-            <button style="font-size: 12px" type="button" class="btn btn-light">New to Data/Analytics?</button>
           </div>
         </div>
         <br>
@@ -100,77 +97,81 @@
         </div>
       </div>
     </section>
+
     <div style='border-top: solid; border-color: white;'>
     </div>
-    <section style='background-color: #42484D;'
-class='fade-scroll' display='block' id='services'>
+    
+    <section class='fade-scroll' style='display: block' id='newToAnalytics'>
       <div style='justify-content: center' class="container">
         <div style='justify-content: center;' class="row">
         </div>
         <br>
         <br>
-        <br>
+        <br> 
         <div>
-          <h1 id='title' style='color: white'>
-            OUR
-            <br>
-            SERVICES
+          <h1 id='title' style='color: #1B1B1E'>
+            NEW TO ANALYTICS
           </h1>
-          <div class='row' id='titleSub2'>
-            {{!-- <div class='col'>
-              <p>Products</p>
-              <ul>
-                <li id='titleSub2Sub'>
-                  EcoInsights
-                </li>
-                <li id='titleSub2Sub'>
-                  SaturYAY
-                </li>
-                <li id='titleSub2Sub'>
-                  CompACT
-                </li>
-              </ul>
-            </div> --}}
-            <div class='col'>
-              <p>Consulting</p>
-              <ul>
-                <li id='titleSub2Sub'>
-                  We specialize in data visualization, data manipulation, and automation.
-                </li>
-              </ul>
-            </div>
-            <div class='col'>
-              <p>Hosting</p>
-              <ul>
-                <li id='titleSub2Sub'>
-                  Custom BI Platform to present your analytics.
-                </li>
-              </ul>
-            </div>
-            <div class='col'>
-              <p>Full Stack Web Development</p>
-              <ul>
-                <li id='titleSub2Sub'>
-                  Build quick and effective websites.
-                </li>
-                <li id='titleSub2Sub'>
-                  Website hosting.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div href='#webdev' style='justify-content: center;' class='row'>
-              <span class="fa-stack fa-3x">
-                <i  class="fa fa-chevron-down fa-stack-1x"></i>
-              </span>
-          </div>
         </div>
-        <br>
-        <div style='justify-content: center' class="row">
-          <div class="col-4">
+        <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-1">
           </div>
-        </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-file-text fa-3x"></i>&nbsp;&nbsp;
+            </div>
+            <h3>1. Data Sources</h3>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-database fa-3x"></i>
+            </div>
+            <h3>2. Data Storage</h3>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-filter fa-3x"></i>
+            </div>            
+            <h3>3. Data Prep</h3>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-bar-chart fa-3x"></i>&nbsp;&nbsp;
+              <i  class="fa fa-pie-chart fa-3x"></i>
+            </div>            <h3>4. Data Visualization</h3>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-users fa-3x"></i>&nbsp;&nbsp;
+            </div>            <h3>5. Distribution</h3>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div><!-- /.row -->
+
       </div>
+        <br>
+      </div>
+    </section>
+
+    <div style='border-top: solid; border-color: white;'>
+    </div>
+    
+    <section style='background-color: #42484D;'
+    class='fade-scroll' display='block' id='services'>
     </section>
     <div style='border-top: solid; border-color: white;'>
     </div>
@@ -246,24 +247,6 @@ class='fade-scroll' display='block' id='services'>
         <p>Address: 905 McGee St. #289, Kansas City, MO 64106</p>
         <p>Phone: (913) 297-9239</p>
         <p>Email: sales@liftkc.com</p>
-
-        {{!-- <ul class="list-inline list-social">
-          <li class="list-inline-item social-twitter">
-            <a href="#">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-facebook">
-            <a href="#">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-google-plus">
-            <a href="#">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul> --}}
       </div>
     </footer>
 
@@ -277,9 +260,7 @@ class='fade-scroll' display='block' id='services'>
 
     <!-- Custom scripts for this template -->
     <script src="javascripts/new-age.min.js"></script>
-    <script src="javascripts/canvas.js"></script>
-    <script src="javascripts/fullStackCanvas.js"></script>
-    {{!-- <script src="javascripts/getImages.js"></script> --}}
+    <script src="javascripts/navigation.js"></script>
 
     <!-- Check images before project page gets rendered! -->
     <script>
