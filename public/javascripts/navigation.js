@@ -6,6 +6,10 @@ function showNewToAnalytics(){
     } else {
       x.style.display = "none";
     }
+    var y = document.getElementById("Oracle");
+    y.style.display = "none";
+    var z = document.getElementById("Tableau");
+    z.style.display = "none";
 }
 
 function showTableau(){
@@ -14,14 +18,23 @@ function showTableau(){
       var y = document.getElementById("Oracle");
       y.style.display = "none";
       var z = document.getElementById("Tableau");
-      z.style.display = "block";
+      if (z.style.display === "none") {
+        z.style.display = "block";
+      } else {
+        z.style.display = "none";
+      }
 }
 
 function showOracle(){
     var x = document.getElementById("newToAnalytics");
       x.style.display = "none";
     var y = document.getElementById("Oracle");
+
+    if (y.style.display === "none") {
     y.style.display = "block";
+    } else {
+    y.style.display = "none";
+    }
     var z = document.getElementById("Tableau");
     z.style.display = "none";
 }
