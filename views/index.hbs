@@ -84,10 +84,10 @@
           <div class='row' style='height: 10px'>
           </div>
           <div class='row'>
-            <button style="color: rgb(46, 185, 46)" type="button" class="btn btn-light">Tableau</button>
+            <button onClick= 'showTableau()' style="color: rgb(46, 185, 46)" type="button" class="btn btn-light">Tableau</button>
           <div style='width: 10px'>
           </div>
-            <button style="color: red" type="button" class="btn btn-dark">Oracle</button>
+            <button onClick= 'showOracle()' style="color: red" type="button" class="btn btn-dark">Oracle</button>
           </div>
         </div>
         <br>
@@ -97,10 +97,8 @@
         </div>
       </div>
     </section>
-
     <div style='border-top: solid; border-color: white;'>
     </div>
-    
     <section class='fade-scroll' style='display: none' id='newToAnalytics'>
       <div style='justify-content: center' class="container">
         <div style='justify-content: center;' class="row">
@@ -162,7 +160,7 @@
           </div>
           <div class="col-lg-1">
           </div>
-        </div><!-- /.row -->
+        </div>
 
       </div>
         <br>
@@ -171,9 +169,143 @@
 
     <div style='border-top: solid; border-color: white;'>
     </div>
-    
-    <section style='background-color: #42484D;'
-    class='fade-scroll' display='block' id='services'>
+    <section style='display: none; background-color: rgba(117, 226, 117, 0.685);'
+    class='fade-scroll' id='Tableau'>
+          <div style='justify-content: center' class="container">
+        <div style='justify-content: center;' class="row">
+        </div>
+        <br>
+        <br>
+        <br> 
+        <div>
+          <h1 id='title' style='color: #1B1B1E'>
+            TABLEAU
+          </h1>
+        </div>
+        <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-file-text fa-3x"></i>&nbsp;&nbsp;
+            </div>
+            <h3>1. Data Sources</h3>
+            <p>Data is the most important asset for businesses today. Whether you are pointing to text files, excel, SQL databases, NoSQL databases, API we are here to help. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-database fa-3x"></i>
+            </div>
+            <h3>2. Data Storage</h3>
+            <p>Once the important data is identified and connected, identify a solution to house that data for easy access and manipulation.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-filter fa-3x"></i>
+            </div>            
+            <h3>3. Data Prep</h3>
+            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-bar-chart fa-3x"></i>&nbsp;&nbsp;
+              <i  class="fa fa-pie-chart fa-3x"></i>
+            </div>           
+            <h3>4. Data Visualization</h3>
+            <p>The human mind does not easily consume data in a table. Pull out KPIs and visually represent it. LiftKC uses cutting edge data visualization tools to create, automate, and present data on the fly and in a professional manner.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-users fa-3x"></i>&nbsp;&nbsp;
+            </div>            
+            <h3>5. Distribution</h3>
+            <p>Keep your end users in mind by putting distribution methods in place early. LiftKC will help you utilize Oracle, Tableau, or custom websites to give your customers insights on demand.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div>
+
+      </div>
+        <br>
+      </div>
+    </section>
+    <div style='border-top: solid; border-color: white;'>
+    </div>    
+    <section style='display: none; background-color: rgba(224, 80, 80, 0.671);'
+    class='fade-scroll' id='Oracle'>
+          <div style='justify-content: center' class="container">
+        <div style='justify-content: center;' class="row">
+        </div>
+        <br>
+        <br>
+        <br> 
+        <div>
+          <h1 id='title' style='color: #1B1B1E'>
+            ORACLE
+          </h1>
+        </div>
+        <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-file-text fa-3x"></i>&nbsp;&nbsp;
+            </div>
+            <h3>1. Data Sources</h3>
+            <p>Data is the most important asset for businesses today. Whether you are pointing to text files, excel, SQL databases, NoSQL databases, API we are here to help. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-database fa-3x"></i>
+            </div>
+            <h3>2. Data Storage</h3>
+            <p>Once the important data is identified and connected, identify a solution to house that data for easy access and manipulation.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-filter fa-3x"></i>
+            </div>            
+            <h3>3. Data Prep</h3>
+            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-bar-chart fa-3x"></i>&nbsp;&nbsp;
+              <i  class="fa fa-pie-chart fa-3x"></i>
+            </div>           
+            <h3>4. Data Visualization</h3>
+            <p>The human mind does not easily consume data in a table. Pull out KPIs and visually represent it. LiftKC uses cutting edge data visualization tools to create, automate, and present data on the fly and in a professional manner.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-2">
+            <div class=''>
+              <i  class="fa fa-users fa-3x"></i>&nbsp;&nbsp;
+            </div>            
+            <h3>5. Distribution</h3>
+            <p>Keep your end users in mind by putting distribution methods in place early. LiftKC will help you utilize Oracle, Tableau, or custom websites to give your customers insights on demand.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+          <div class="col-lg-1">
+          </div>
+        </div>
+
+      </div>
+        <br>
+      </div>
     </section>
     <div style='border-top: solid; border-color: white;'>
     </div>
