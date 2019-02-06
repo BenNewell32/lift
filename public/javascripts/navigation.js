@@ -10,6 +10,7 @@ function showNewToAnalytics(){
     y.style.display = "none";
     var z = document.getElementById("Tableau");
     z.style.display = "none";
+
 }
 
 function showTableau(){
@@ -23,6 +24,9 @@ function showTableau(){
       } else {
         z.style.display = "none";
       }
+
+      var t = document.getElementById("TableauDetail");
+        t.style.display = "none";
 }
 
 function showOracle(){
@@ -37,4 +41,34 @@ function showOracle(){
     }
     var z = document.getElementById("Tableau");
     z.style.display = "none";
+
+    var t = document.getElementById("OracleDetail");
+    t.style.display = "none";
 }
+
+function showTableauDetail(){
+  var y = document.getElementById("TableauDetail");
+  if (y.style.display === "none") {
+  y.style.display = "block";
+  } else {
+  y.style.display = "none";
+  }
+}
+
+function ShowOracleDetail(){
+  var y = document.getElementById("OracleDetail");
+  if (y.style.display === "none") {
+  y.style.display = "block";
+  } else {
+  y.style.display = "none";
+  }
+  
+}
+
+function benConsulting(){
+window.location.href = 'https://benmnewell.wixsite.com/website/book-online/tableau-consulting';
+}
+
+function zachConsulting(){
+  window.location.href = 'https://benmnewell.wixsite.com/website/book-online/oracle-consulting';
+  }

@@ -172,54 +172,7 @@
     <div style='border-top: solid; border-color: white;'>
     </div>
 
-    <section id='Tableau' style='display: none; background-color: white;'
-      class='fade-scroll' >
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Tableau</h4>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li style='font-weight: bold'>Tableau Desktop (Certified 10.1)</li>
-              <li>-Data Visualization</li>
-              <li>-Report Development</li>
-              <br>
-              <li style='font-weight: bold'>Tableau Server</li>
-                <li>-Administration</li>
-                <li>-Publishing</li>
-                <li>-Automation</li>
-              <br>
-              <li style='font-weight: bold'>Tableau JavaScript API</li>
-              <li>-Custom enterprise portals</li>
-            </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Learn More</button>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Your Pro</h4>
-          </div>
-          <div class="card-body">
-            <div style='margin: 0 auto' class="col-lg-4">
-            <img class="rounded-circle" src="../images/bens.png" alt="" width="140" height="140">
-          </div>
-          <h5>Ben M. Newell, MBA </h5>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>6+ years Development/Training experience</li>
-              <li>2 years Tableau Server customer support</li>
-            </ul>
-            <h1 class="card-title pricing-card-title">$125 <small class="text-muted">/ hr</small></h1>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div style='border-top: solid; border-color: white;'>
-    </div> 
-
-    <section id='TableauDetails' style='display: none; background-color: rgba(117, 226, 117, 0.685);'
+    <section id='TableauDetail' style='display: none; background-color: rgba(117, 226, 117, 0.685);'
       class='fade-scroll' >
           <div style='justify-content: center' class="container">
         <div style='justify-content: center;' class="row">
@@ -278,7 +231,7 @@
     <div style='border-top: solid; border-color: white;'>
     </div>
 
-    <section id='Oracle' style='display: none; background-color: white;'
+    <section id='Tableau' style='display: none; background-color: white;'
       class='fade-scroll' >
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
@@ -299,7 +252,7 @@
               <li style='font-weight: bold'>Tableau JavaScript API</li>
               <li>-Custom enterprise portals</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Learn More</button>
+            <button onClick='showTableauDetail()' type="button" class="btn btn-lg btn-block btn-primary">Learn More</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -308,15 +261,17 @@
           </div>
           <div class="card-body">
             <div style='margin: 0 auto' class="col-lg-4">
-            <img class="rounded-circle" src="../images/zach.PNG" alt="" width="140" height="140">
+            <img class="rounded-circle" src="../images/bens.png" alt="" width="140" height="140">
           </div>
-          <h5>Zach T. Newell, MBA </h5>
+          <h5>Ben M. Newell, MBA </h5>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Oracle Analytics Cloud</li>
-              <li>5+ years of experience administrating OBIEE </li>
+              <li>6+ years Development/Training experience</li>
+              <li>2 years Tableau Server customer support</li>
             </ul>
-            <h1 class="card-title pricing-card-title">$125 <small class="text-muted">/ hr</small></h1>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            <h1 class="card-title pricing-card-title">$125 <small class="text-muted">/ hr</small>
+            </h1>
+            <button onclick="benConsulting()" type="button" class="btn btn-lg btn-block btn-primary" href="https://benmnewell.wixsite.com/website">Get started</button>
+            
           </div>
         </div>
       </div>
@@ -396,6 +351,53 @@
 
     <div style='border-top: solid; border-color: white;'>
     </div>
+
+    <section id='Oracle' style='display: none; background-color: white;'
+      class='fade-scroll' >
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Tableau</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li style='font-weight: bold'>Oracle Analytics Cloud</li>
+              <li>-Data Visualization</li>
+              <li>-Report Development</li>
+              <br>
+              <li style='font-weight: bold'>OBIEE</li>
+              <li>-Data Visualization</li>
+              <li>-Report Development</li>
+                <li>-Automation</li>
+              <br>
+              <li style='font-weight: bold'>APEX</li>
+              <li>-Application Development</li>
+            </ul>
+            <button onClick='ShowOracleDetail()'  type="button" class="btn btn-lg btn-block btn-primary">Learn More</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Your Pro</h4>
+          </div>
+          <div class="card-body">
+            <div style='margin: 0 auto' class="col-lg-4">
+            <img class="rounded-circle" src="../images/zach.PNG" alt="" width="140" height="140">
+          </div>
+          <h5>Zach T. Newell, MBA </h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Oracle Analytics Cloud</li>
+              <li>5+ years of experience administrating OBIEE </li>
+            </ul>
+            <h1 class="card-title pricing-card-title">$125 <small class="text-muted">/ hr</small></h1>
+            <button onclick="zachConsulting()" type="button" class="btn btn-lg btn-block btn-primary" >Get started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style='border-top: solid; border-color: white;'>
+    </div> 
 
     <section id='about' class='fade-scroll' display='block' >
       <div style='justify-content: center' class="container">
