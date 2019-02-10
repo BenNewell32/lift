@@ -45,6 +45,9 @@ function showOracle(){
     var z = document.getElementById("Tableau");
     z.style.display = "none";
 
+    var q = document.getElementById("TableauDetail");
+    q.style.display = "none";
+
     var t = document.getElementById("OracleDetail");
     t.style.display = "none";
 }
