@@ -72,3 +72,21 @@ window.location.href = 'https://benmnewell.wixsite.com/website/book-online/table
 function zachConsulting(){
   window.location.href = 'https://benmnewell.wixsite.com/website/book-online/oracle-consulting';
   }
+
+function showBenEngagements(){
+  var y = document.getElementById("benEngagements");
+  if (y.style.display === "none") {
+  y.style.display = "block";
+  } else {
+  y.style.display = "none";
+  }
+}
+
+function showZachEngagements(){
+  var y = document.getElementById("zachEngagements");
+  if (y.style.display === "none") {
+  y.style.display = "block";
+  } else {
+  y.style.display = "none";
+  }
+}
