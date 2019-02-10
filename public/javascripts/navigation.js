@@ -27,6 +27,9 @@ function showTableau(){
 
       var t = document.getElementById("TableauDetail");
         t.style.display = "none";
+
+      var q = document.getElementById("OracleDetail");
+      q.style.display = "none";
 }
 
 function showOracle(){
