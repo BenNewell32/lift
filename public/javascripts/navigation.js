@@ -17,6 +17,8 @@ function showNewToAnalytics(){
     var q = document.getElementById("OracleDetail");
     q.style.display = "none";
 
+    $("html, body").delay(100).animate({scrollTop: $('#newToAnalytics').offset().top }, 1000);
+
 }
 
 function showTableau(){
@@ -36,6 +38,8 @@ function showTableau(){
 
       var q = document.getElementById("OracleDetail");
       q.style.display = "none";
+
+      $("html, body").delay(100).animate({scrollTop: $('#Tableau').offset().top }, 1000);
 }
 
 function showOracle(){
@@ -56,7 +60,10 @@ function showOracle(){
 
     var t = document.getElementById("OracleDetail");
     t.style.display = "none";
-}
+
+    $("html, body").delay(100).animate({scrollTop: $('#Oracle').offset().top }, 1000);
+
+  }
 
 function showTableauDetail(){
   var y = document.getElementById("TableauDetail");
@@ -65,6 +72,9 @@ function showTableauDetail(){
   } else {
   y.style.display = "none";
   }
+
+  $("html, body").delay(100).animate({scrollTop: $('#TableauDetail').offset().top }, 1000);
+
 }
 
 function ShowOracleDetail(){
@@ -75,6 +85,8 @@ function ShowOracleDetail(){
   y.style.display = "none";
   }
   
+  $("html, body").delay(100).animate({scrollTop: $('#OracleDetail').offset().top }, 1000);
+
 }
 
 function benConsulting(){
@@ -92,6 +104,9 @@ function showBenEngagements(){
   } else {
   y.style.display = "none";
   }
+
+  $("html, body").delay(100).animate({scrollTop: $('#benEngagements').offset().top }, 1000);
+
 }
 
 function showZachEngagements(){
@@ -101,4 +116,7 @@ function showZachEngagements(){
   } else {
   y.style.display = "none";
   }
+
+  $("html, body").delay(100).animate({scrollTop: $('#zachEngagements').offset().top }, 1000);
+
 }
