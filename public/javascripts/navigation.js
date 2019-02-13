@@ -17,7 +17,7 @@ function showNewToAnalytics(){
     var q = document.getElementById("OracleDetail");
     q.style.display = "none";
 
-    $("html, body").delay(100).animate({scrollTop: $('#newToAnalytics').offset().top }, 1000);
+    $("html, body").delay(100).animate({scrollTop: $('#oracleButton').offset().top }, 1000);
 
 }
 
@@ -39,7 +39,7 @@ function showTableau(){
       var q = document.getElementById("OracleDetail");
       q.style.display = "none";
 
-      $("html, body").delay(100).animate({scrollTop: $('#Tableau').offset().top }, 1000);
+      $("html, body").delay(100).animate({scrollTop: $('#oracleButton').offset().top }, 1000);
 }
 
 function showOracle(){
@@ -61,7 +61,7 @@ function showOracle(){
     var t = document.getElementById("OracleDetail");
     t.style.display = "none";
 
-    $("html, body").delay(100).animate({scrollTop: $('#Oracle').offset().top }, 1000);
+    $("html, body").delay(100).animate({scrollTop: $('#oracleButton').offset().top }, 1000);
 
   }
 
