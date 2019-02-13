@@ -10,6 +10,12 @@ function showNewToAnalytics(){
     y.style.display = "none";
     var z = document.getElementById("Tableau");
     z.style.display = "none";
+    
+    var t = document.getElementById("TableauDetail");
+    t.style.display = "none";
+
+    var q = document.getElementById("OracleDetail");
+    q.style.display = "none";
 
 }
 
