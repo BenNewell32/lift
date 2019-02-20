@@ -90,11 +90,11 @@ function ShowOracleDetail(){
 }
 
 function benConsulting(){
-window.location.href = 'https://benmnewell.wixsite.com/website/book-online/tableau-consulting';
+window.location.href = 'https://www.liftkc.online/book-online/tableau-consulting';
 }
 
 function zachConsulting(){
-  window.location.href = 'https://benmnewell.wixsite.com/website/book-online/oracle-consulting';
+  window.location.href = 'https://www.liftkc.online/book-online/oracle-consulting';
   }
 
 function showBenEngagements(){
