@@ -10,6 +10,7 @@ var fetch = require('node-fetch');
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 var projectsRouter = require('./routes/projects');
+var liftInsightsRouter = require('./routes/liftinsights');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/projects', projectsRouter);
+app.use('/liftinsights', liftInsightsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
