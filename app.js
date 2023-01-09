@@ -12,6 +12,7 @@ var apiRouter = require("./routes/api");
 var pickleballRouter = require("./routes/pickleball");
 var projectsRouter = require("./routes/projects");
 var liftInsightsRouter = require("./routes/liftinsights");
+const puppeteer = require("puppeteer");
 
 var app = express();
 
