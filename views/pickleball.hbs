@@ -42,167 +42,99 @@
     <link href="stylesheets/new-age.min.css" rel="stylesheet" />
   </head>
   <body id="home">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="">
-        <img width="20%" height="20%" src="../images/NewLiftSVG.svg" alt="" />
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Carousel</a>
         <button
-          class="navbar-toggler navbar-toggler-right"
+          class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          Menu
-          <i class="fa fa-bars"></i>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="#intro"
-                style="font-weight: bold; font-size: 15px;"
-              >HOME</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                style="font-size: 15px; font-weight: bold"
-                href="#titleSubTop"
-              >ABOUT US</a>
-            </li>
-            {{! <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="/liftinsights">PRODUCTS</a>
-            </li> }}
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                style="font-size: 15px; font-weight: bold;"
-                href="#about"
-              >LESSONS</a>
+              <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                style="font-size: 15px; font-weight: bold"
-                href="#contact"
-              >FOLLOW US</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                style="font-size: 15px; font-weight: bold"
-                href="https://benmnewell.wixsite.com/website"
-              >CONTACT</a>
+              <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >Search</button>
+          </form>
         </div>
-      </div>
-    </nav>
-    <div class="container">
-
-      <div class="card-profile">
-        <div
-          class="card-profile_visual"
-          style='  background: url("../images/yana3.jpg") no-repeat center center/cover; filter: grayscale(30%);'
-        ></div>
-
-        <div class="card-profile_user-infos">
-          <span class="infos_name">Yana (Grechkina) Newell</span>
-          <span class="infos_nick"></span>
-
-          <a href="#"></a>
+      </nav>
+    </header>
+    <main role="main">
+      </main>
+      </br>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Album example</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
         </div>
-
-        <div class="card-profile_user-stats">
-          <div class="stats-holder">
-            <div class="user-stats">
-              <strong>Highest PPA </br>Doubles</strong>
-              <span>16</span>
+      </section>
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow rounded">
+          <img
+          id="ben"
+            class="card-img-top rounded"
+            style="height: 30vh; width: 100%; display: block;"
+            
+          />
+          <div class="card-body">
+            <h1 class="jumbotron-heading">Ben Newell</h1>
+            <p class="card-text">PPA Touring Pro</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-primary"
+                >Book Lessons</button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-success"
+                >Sponsors</button>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-secondary"
+                >About</button>
             </div>
-            <div class="user-stats">
-              <strong>Highest PPA </br>Mixed </strong>
-              <span>14</span>
-            </div>
-            <div class="user-stats">
-              <strong>Highest PPA </br>Singles </strong>
-              <span>10</span>
-            </div>
-            <div class="user-stats">
-              <strong>DUPR </br>Doubles</strong>
-              <span>5.83</span>
-            </div>
-            <div class="user-stats">
-              <strong>DUPR </br>Singles</strong>
-              <span>5.70</span>
-            </div>
+            
           </div>
         </div>
-
       </div>
-
-    </div>
-
-    <div class="container">
-
-      <div class="card-profile">
-        <div
-          class="card-profile_visual"
-          style='  background: url("../images/ben3.jpg") no-repeat center center/cover;  filter: grayscale(30%);'
-        ></div>
-
-        <div class="card-profile_user-infos">
-          <span class="infos_name">Ben Newell</span>
-          <span class="infos_nick"></span>
-
-          <a href="#"></a>
-        </div>
-
-        <div class="card-profile_user-stats">
-          <div class="stats-holder">
-            <div class="user-stats">
-              <strong>Highest PPA </br>Doubles</strong>
-              <span>17</span>
-            </div>
-            <div class="user-stats">
-              <strong>Highest PPA </br>Mixed </strong>
-              <span>17</span>
-            </div>
-            <div class="user-stats">
-              <strong>Highest PPA </br>Singles </strong>
-              <span>27</span>
-            </div>
-            <div class="user-stats">
-              <strong>DUPR </br>Doubles</strong>
-              <span>6.24</span>
-            </div>
-            <div class="user-stats">
-              <strong>DUPR </br>Singles</strong>
-              <span>6.66</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div style="border-top: solid; border-color: white;">
-    </div>
-
-    <footer>
-      <div id="contact" class="container">
-        <p>&copy; Created by Lift LLC. All Rights Reserved.</p>
-        <p>No affiliation with Tableau or Oracle.</p>
-        <br />
-        <h5 style="color: white">Contact Us</h5>
-        <p>(785) 633-5715 </p><p>(texting only)</p>
-      </div>
-    </footer>
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2017-2018 Company, Inc. ·
+          <a href="#">Privacy</a>
+          ·
+          <a href="#">Terms</a></p>
+      </footer>
+    </main>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
