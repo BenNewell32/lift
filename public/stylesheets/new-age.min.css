@@ -9,6 +9,19 @@
 #yanasection {
   max-width: 450px;
 }
+#ppa {
+  background-image: url("../images/ppa.png");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+#mlp {
+  background-image: url("../images/mlp.png");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
 #ben {
   background-image: url("../images/ben3.jpg");
   background-repeat: no-repeat;
