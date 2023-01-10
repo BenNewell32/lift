@@ -16,7 +16,6 @@ var CNPdata;
   // Wait a bit
   await new Promise((resolve) => setTimeout(resolve, 5000));
   // Get the src of the iframe
-  dateData = await page.click(`$(".gj-icon")`);
   CNPdata = await page.evaluate(`$("#id_tm").find("option").text()`);
 
   console.log(CNPdata);
