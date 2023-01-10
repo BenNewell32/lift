@@ -123,6 +123,58 @@ function benLessons() {
     .animate({ scrollTop: $("#ben").offset().top }, 1000);
 }
 
+function calendar() {
+  var x = document.getElementById("calendar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("benAbout");
+  y.style.display = "none";
+  var z = document.getElementById("benSponsors");
+  z.style.display = "none";
+
+  var t = document.getElementById("yanaAbout");
+  t.style.display = "none";
+
+  var q = document.getElementById("yanaSponsors");
+  q.style.display = "none";
+  var r = document.getElementById("yanaLessons");
+  r.style.display = "none";
+  var s = document.getElementById("timelineContainer");
+  s.style.display = "none";
+
+  $("html, body")
+    .delay(100)
+    .animate({ scrollTop: $("#calendar").offset().top }, 1000);
+}
+function timelineContainer() {
+  var x = document.getElementById("timelineContainer");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("benAbout");
+  y.style.display = "none";
+  var z = document.getElementById("benSponsors");
+  z.style.display = "none";
+
+  var t = document.getElementById("yanaAbout");
+  t.style.display = "none";
+
+  var q = document.getElementById("yanaSponsors");
+  q.style.display = "none";
+  var r = document.getElementById("yanaLessons");
+  r.style.display = "none";
+  var s = document.getElementById("calendar");
+  s.style.display = "none";
+
+  $("html, body")
+    .delay(100)
+    .animate({ scrollTop: $("#calendar").offset().top }, 1000);
+}
 function benSponsors() {
   var x = document.getElementById("benSponsors");
   if (x.style.display === "none") {

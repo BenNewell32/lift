@@ -2,7 +2,6 @@ var express = require("express");
 var router = express.Router();
 const puppeteer = require("puppeteer");
 var CNPdata;
-
 // PULL CNP DATA//
 // (async () => {
 //   const browser = await puppeteer.launch();

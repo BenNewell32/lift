@@ -37,6 +37,10 @@
       href="https://fonts.googleapis.com/css?family=Muli"
       rel="stylesheet"
     />
+  <link rel='stylesheet' href='https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+
+
 
     <!-- Custom styles for this template -->
     <link href="stylesheets/new-age.min.css" rel="stylesheet" />
@@ -90,6 +94,7 @@
     <main role="main">
       </main>
       </br>
+      
       <div id="timeline" class="row">
 				<div class="col-md-12">
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -98,9 +103,19 @@
         
         </div>
         <hr/>
-					<div style="display:inline-block;width:100%;overflow-y:auto;">
-                  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=1&showTitle=1&showNav=1&src=NzZiZWU4YWM2YTllMzNkZmYzNmRhMmNiODY4NDFhYmE3NjA2YTc0MjU2YjA5YzdhNjE2MTI1NTFmODU0OTk5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OWQwMTYwOTdmOTA1ZmJjODg3ODcyNjhiN2YzYWM4ZThhMjQ5ZWQ3MGY1MmE5M2MwOWQ3NDdmYzUxNzg0YTg3ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441&color=%23009688" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  
+        
+        <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    onclick="timelineContainer()"
+                  >Show Timeline</button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-primary"
+                    onclick="calendar()"
+                  >Show Calendar</button>
+          <div id="timelineContainer" style="display:block">
+					<div  style="display:inline-block;width:100%;overflow-y:auto;"> 
 					<ul class="timeline timeline-horizontal">
 						<li class="timeline-item">
 							<div class="timeline-badge" style="background-color:white; border-style: solid;
@@ -240,6 +255,8 @@
 				</div>
 			</div>
       <hr/>
+<div style='display: none' id="calendar"></div>
+<hr/>
       <div class="row">
         <div class="col-md-3"></div>
         <div id='yanasection'  class="col-md-3">
@@ -437,6 +454,7 @@
               </ul>
             </div>
           </div>
+          </div>
         </div>
         <div class="col-md-3"></div>
       </div>      
@@ -455,12 +473,15 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="javascripts/new-age.min.js"></script>
     <script src="javascripts/navigation.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- partial -->
+  <script src='https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js'></script>
+  <script  src="javascripts/script.js"></script>
 
     <!-- Check images before project page gets rendered! -->
     <script>
