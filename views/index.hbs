@@ -11,15 +11,11 @@
     <title>Bens.Work</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
   <script src="https://unpkg.com/feather-icons"></script>
-  <script
-      id="setmore_script"
-      type="text/javascript"
-      src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"
-    ></script>
+
     
 
     <script
@@ -39,7 +35,7 @@
   <body id='home'>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav style='background-color: white' class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <img width='20%' height='20%' src="../images/NewLiftSVG.svg" alt="">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,32 +76,33 @@
         <br>
         <div>
           <h1 id='title' style='color: #1B1B1E'>
-            YOUR
-            <br>
-            INSIGHTS
+            OUR PROCESS
           </h1>
-          <div style='width: 52vw; border-top: solid; border-color: white;'>
+          <div style='width: 52vw; border-top: solid; border-color: #3f7bc7;'>
           </div>
           <h1 id='title'>
-            DELIVERING
-            <br>
-            RESULTS
+           YOUR INSIGHTS
           </h1>
           <h3 id='titleSubTop'>
             MISSION | PROVIDE LIFT<br><br>
           </h3>
-          <div href="#about" class='row'>
-            <button  onClick='showNewToAnalytics()'style="font-size:13px; height: 50px; width:300px" type="button" class="btn btn-block btn-light">New to Data Analytics?</button>
-          </div>&nbsp;
-          <div class='row' style='height: 10px'>
-          </div>
+          
           <div class='row'>
             {{!-- <div style='padding-top: 10px'> --}}
-              <button onClick= 'showTableau()' style="padding-top: 10px; height: 50px; width:300px; color: rgb(46, 185, 46)" type="button" class="btn btn-lg btn-block btn-light">Tableau</button>
-              <div id='oracleButton' style='height: 10px'></div> &nbsp;
-              <button onClick= 'showOracle()' style="padding-top: 10px; height: 50px; width:300px; color: red" type="button" class="btn btn-lg btn-block btn-dark">Oracle</button>
+              <button onClick= 'showTableau()' style="padding-top: 10px; height: 50px; width:300px; " type="button" class=" btn-success btn-lg btn-block  ">Tableau</button>
+              <div style='height: 10px'></div> &nbsp;
+              <button onClick= 'showWeb()' style="padding-top: 10px; height: 50px; width:300px; " type="button" class=" btn-primary btn-lg btn-block  ">Web Development</button>
+
+              {{!-- <button onClick= 'showOracle()' style="padding-top: 10px; height: 50px; width:300px; color: red" type="button" class=" btn-lg btn-block btn-dark">Oracle</button> --}}
             {{!-- </div> --}}
           </div>
+          <div class='row' style='height: 10px'>
+          </div>
+          <div href="#about" class='row'>
+            <button  onClick='showNewToAnalytics()'style="font-size:13px; height: 50px; width:300px" type="button" class=" btn-block  ">New to Data Analytics?</button>
+            <div style='height: 10px'></div> &nbsp;
+            <button  onClick='showNewToWeb()'style="font-size:13px; height: 50px; width:300px" type="button" class=" btn-block  ">New to Website Development?</button>
+          </div>&nbsp;
         </div>
         <br>
         <div style='justify-content: center' class="row">
@@ -114,32 +111,7 @@
         </div>
       </div>
     </section>
-    <iframe src="https://bennyg60s.setmore.com/" scrolling="yes" width="1200px" height="600px" frameborder="0"></iframe>
-    <a
-        style="float: none"
-        id="Setmore_button_iframe"
-        href="https://booking.setmore.com/scheduleappointment/058fa8c2-a933-4fff-9af3-2f601b3641ff"
-        ><img
-          border="none"
-          src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Settings/book-now-blue.svg"
-          alt="Book an appointment with Benny Newell using Setmore"
-      /></a>
-      <a
-      style="
-        float: none;
-        position: fixed;
-        right: -2px;
-        top: 25%;
-        display: block;
-        z-index: 20000;
-      "
-      id="Setmore_button_iframe"
-      href="https://booking.setmore.com/scheduleappointment/058fa8c2-a933-4fff-9af3-2f601b3641ff"
-      ><img
-        border="none"
-        src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png"
-        alt="Book an appointment with Benny Newell using Setmore"
-    /></a>
+
     <div style='border-top: solid; border-color: white;'>
     </div>
 
@@ -225,7 +197,7 @@
           {{!-- <div class="col-lg-1">
           </div> --}}
           <div style='width: 100%'>
-              <button  onClick='showNewToAnalytics()'style="background: #1F7FC3; border: 2px solid white; color: white; margin: auto; font-size:13px; height: 50px; width:50%" type="button" class="btn btn-block btn-primary">HIDE</button>
+              <button  onClick='showNewToAnalytics()'style="background: #1F7FC3; border: 2px solid white; color: white; margin: auto; font-size:13px; height: 50px; width:50%" type="button" class=" btn-block btn-primary">HIDE</button>
           </div>
         </div>
       </div>
@@ -319,7 +291,7 @@
               <li style='font-weight: bold'>Tableau JavaScript API</li>
               <li>-Custom enterprise portals</li>
             </ul>
-            {{!-- <button onClick='showTableauDetail()' type="button" class="btn btn-lg btn-block btn-primary">Learn More</button> --}}
+            {{!-- <button onClick='showTableauDetail()' type="button" class=" btn-lg btn-block btn-primary">Learn More</button> --}}
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -344,7 +316,7 @@
             </ul>
             <h1 class="card-title pricing-card-title">$90 <small class="text-muted">/ hr</small>
             </h1>
-            <button onclick="benConsulting()" type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            <button onclick="benConsulting()" type="button" class=" btn-lg btn-block btn-primary">Get started</button>
             
           </div>
         </div>
@@ -354,7 +326,7 @@
     <div style='border-top: solid; border-color: white;'>
     </div> 
 
-    <section id='OracleDetail' style='display: none; background-color: rgba(224, 80, 80, 0.671);'
+    {{!-- <section id='OracleDetail' style='display: none; background-color: rgba(224, 80, 80, 0.671);'
       class='fade-scroll' id='Oracle'>
           <div style='justify-content: center' class="container">
         <div style='justify-content: center;' class="row">
@@ -421,7 +393,7 @@
       </div>
         <br>
       </div>
-    </section>
+    </section> --}}
 
     <div style='border-top: solid; border-color: white;'>
     </div>
@@ -462,7 +434,7 @@
               <li>-Utilizing Oracle Cloud storage for files</li>
               <li>-More, more, more! Oracle Cloud has many other solutions!</li> --}}
             </ul>
-            {{!-- <button onClick='ShowOracleDetail()'  type="button" class="btn btn-lg btn-block btn-primary">Learn More</button> --}}
+            {{!-- <button onClick='ShowOracleDetail()'  type="button" class=" btn-lg btn-block btn-primary">Learn More</button> --}}
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -484,7 +456,7 @@
               <li>5+ years of experience administrating OBIEE </li>
             </ul>
             <h1 class="card-title pricing-card-title">$90 <small class="text-muted">/ hr</small></h1>
-            <button onclick="zachConsulting()" type="button" class="btn btn-lg btn-block btn-primary" >Get started</button>
+            <button onclick="zachConsulting()" type="button" class=" btn-lg btn-block btn-primary" >Get started</button>
           </div>
         </div>
       </div>
@@ -504,7 +476,7 @@
           <h1 id='title' style='color: #1B1B1E'>
             TEAM LIFT
           </h1>
-          <div style='width: 52vw; border-top: solid; border-color: white;'>
+          <div style='width: 52vw; border-top: solid; border-color: #3f7bc7;'>
           </div>
           <h1 id='title'>
             WHO WE ARE
@@ -518,7 +490,7 @@
               <div class="col">
                 <img style='height: 210px' src='../images/bens.png'>
               </div>
-              <div style='color: white'class="col">
+              <div class="col">
                 <p style='font-weight: bold'>
                   Ben Newell, MBA
                 </p>
@@ -534,7 +506,7 @@
                 <p>Ben loves to discuss strategy, business objectives, and user experience.
                 </p>
                 <div class='row'>
-                  <button onClick= 'showBenEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="btn btn-light">
+                  <button onClick= 'showBenEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="  ">
                     Previous Engagements
                   </button>
                   <br>
@@ -562,7 +534,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          {{!-- <div class="col">
             <div class='row'>
               <div class="col">
                 <img src='../images/zach.PNG'>
@@ -587,7 +559,7 @@
                   Zach loves to discuss enterprise strategy related to system integration, data quality, and reporting solutions.
                 </p>
                 <div class='row'>
-                  <button onClick= 'showZachEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="btn btn-light">
+                  <button onClick= 'showZachEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="  ">
                     Previous Engagements
                   </button>
                   <br>
@@ -613,7 +585,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           
         </div>
         <div style='justify-content: center' class="row">
@@ -629,9 +601,7 @@
     <footer>     
       <div id='contact' class="container">
         <p>&copy; Created by Lift LLC. All Rights Reserved.</p>
-        <p>No affiliation with Tableau or Oracle.</p>
-        <br>
-        <p>(816) 716-7891</p>
+        <p>(785) 633-5715 (text only)</p>
         <a href="mailto:ben_newell@liftkc.com">ben_newell@liftkc.com</a>
       </div>
     </footer>
