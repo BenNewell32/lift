@@ -1,3 +1,4 @@
+
 function yanaAbout() {
   var x = document.getElementById("yanaAbout");
   if (x.style.display === "none") {
@@ -331,3 +332,6 @@ function showZachEngagements() {
     .delay(100)
     .animate({ scrollTop: $("#zachEngagements").offset().top }, 1000);
 }
+
+
+

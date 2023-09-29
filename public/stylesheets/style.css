@@ -1,8 +1,109 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+
+div.business-card {
+  height: 300px;
+  width: 427px;
+
+}
+div.business-card:hover .flipper, div.business-card.hover .flipper {
+  transform: rotateY(190deg) rotateZ(90deg);
 }
 
-a {
-  color: #00B7FF;
+div.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  transform-origin: center 240px;
 }
+
+div.front, div.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* height: 200px; */
+  width: 200px;
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.75); */
+}
+
+div.front {
+  background-color: #ffffff00;
+  z-index: 0;
+}
+div.front figure {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: -60px -60px;
+}
+div.front div.name {
+  position: absolute;
+  bottom: 10px;
+  left: 113.5px;
+}
+div.front div.name span {
+  display: block;
+  font-size: 40px;
+  line-height: 50px;
+}
+div.front div.name span.full-name {
+  color: #3498db;
+}
+div.front div.name span.title {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+div.back {
+  background-color: #ffffff00;
+  color: white;
+  height: 200px;
+  width: 250px;
+  /* box-sizing: border-box; */
+  transform: rotateY(180deg) rotateZ(90deg);
+}
+div.back div.container-sm {
+  float: left;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+div.back div.container-lg {
+  float: left;
+  width: 40%;
+  margin-top: 2rem;
+}
+div.back figure {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: -60px -60px;
+}
+div.back a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+div.back a:hover {
+  color: #ccc;
+}
+div.back ul.social {
+  font-size: 1.25rem;
+}
+div.back ul.social li {
+  margin-top: 1rem;
+}
+div.back ul.social li:first-child {
+  margin-top: 2rem;
+}
+
+

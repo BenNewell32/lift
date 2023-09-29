@@ -1,0 +1,761 @@
+<html lang="en"><head>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <title>PicklePodz</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" type="image/ico" href="/images/favicon.ico">
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1111.0" data-gr-ext-installed="">
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicklePodz3D</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/OrbitControls.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<style>
+  body {
+  margin: 0;
+}
+.icon-Charm {
+  color: #cf747e;
+}
+.icon-Popstar {
+  color: #c34966;
+}
+.icon-Azalea {
+  color: #d55163;
+}
+.icon-Claret {
+  color: #7a0c32;
+}
+.icon-UpsdellRed {
+  color: #a72126;
+}
+.icon-Red {
+  color: #8b010d;
+}
+.icon-Maroon {
+  color: #790f19;
+}
+.icon-Rose {
+  color: #460810;
+}
+.icon-RootBeer {
+  color: #220b0a;
+}
+.icon-Brown {
+  color: #410e07;
+}
+.icon-LightBrown {
+  color: #C05437 ;
+}
+.icon-Coleus {
+  color: #0c1315;
+}
+.icon-DarkYellow {
+  color: #a78a18;
+}
+.icon-Gold {
+  color: #c3951c;
+}
+.icon-Goldenrod {
+  color: #dca820;
+}
+.icon-Orange {
+  color: #e98017;
+}
+.icon-Olive  {
+  color: #666338;
+}
+.icon-Moss  {
+  color: #91a657;
+}
+.icon-GreenApple  {
+  color: #59ba44;
+}
+.icon-Green  {
+  color: #2F6F51;
+}
+.icon-Cadet  {
+  color: #5F9EA0;
+}
+.icon-Hydrangea  {
+  color: #1D7696;
+}
+.icon-Midnight  {
+  color: #17285C;
+}
+.icon-LakeBlue  {
+  color: #558ebb;
+}
+.icon-Slate  {
+  color: #718a9e;
+}
+.icon-Dark Slate  {
+  color: #274b53;
+}
+.icon-Purple  {
+  color: #ad71a3;
+}
+.icon-PurpleNavy  {
+  color: #524c8b;
+}
+.icon-Grape  {
+  color: #4d3d7c;
+}
+.icon-Smoke  {
+  color: #f8f8f8;
+}
+    
+</style>
+
+
+
+    <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+  <div style="width: 500px; float: left;">
+    Front
+    <div>   
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#cf747e')" id="frontCharm">
+        Charm <i class="bi bi-circle-half icon-Charm"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#c34966')" id="frontPopstar">
+        Popstar <i class="bi bi-circle-half icon-Popstar"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#d55163')" id="frontAzalea">
+        Azalea <i class="bi bi-circle-half icon-Azalea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#7a0c32')" id="frontClaret">
+        Claret <i class="bi bi-circle-half icon-Claret"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#a72126')" id="frontUpsdellRed">
+        Upsdell Red <i class="bi bi-circle-half icon-UpsdellRed"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#8b010d')" id="frontRed">
+        Red <i class="bi bi-circle-half icon-Red"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#790f19')" id="frontMaroon">
+        Maroon <i class="bi bi-circle-half icon-Maroon"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#460810')" id="frontRose">
+        Rose <i class="bi bi-circle-half icon-Rose"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#220b0a')" id="frontRootBeer">
+        Root Beer <i class="bi bi-circle-half icon-RootBeer"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#410e07')" id="frontBrown">
+        Brown <i class="bi bi-circle-half icon-Brown"></i>
+      </button>    
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#c05437')" id="frontBrown">
+        Light Brown <i class="bi bi-circle-half icon-LightBrown"></i>
+      </button> 
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#0c1315')" id="frontColeus">
+        Coleus <i class="bi bi-circle-half icon-Coleus"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#e98017')" id="frontOrange">
+        Orange <i class="bi bi-circle-half icon-Orange"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#a78a18')" id="frontDarkYellow">
+        Dark Yellow <i class="bi bi-circle-half icon-DarkYellow"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#c3951c')" id="frontGold">
+        Gold <i class="bi bi-circle-half icon-Gold"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#dca820')" id="frontGoldenrod">
+        Goldenrod <i class="bi bi-circle-half icon-Goldenrod"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#666338')" id="frontOlive">
+        Olive <i class="bi bi-circle-half icon-Olive"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#91a657')" id="frontMoss">
+        Moss <i class="bi bi-circle-half icon-Moss"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#59ba44')" id="frontGreenApple">
+        GreenApple <i class="bi bi-circle-half icon-GreenApple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#2F6F51')" id="frontGreen">
+        Green <i class="bi bi-circle-half icon-Green"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#5F9EA0')" id="frontCadet">
+        Cadet <i class="bi bi-circle-half icon-Cadet"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#1D7696" ')="" id="frontHydrangea">
+        Hydrangea <i class="bi bi-circle-half icon-Hydrangea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#17285C')" id="frontMidnight">
+        Midnight <i class="bi bi-circle-half icon-Midnight"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#558ebb')" id="frontLakeBlue">
+        Lake Blue <i class="bi bi-circle-half icon-LakeBlue"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#718a9e')" id="frontSlate">
+        Slate <i class="bi bi-circle-half icon-Slate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#274b53')" id="frontDarkSlate">
+        Dark Slate <i class="bi bi-circle-half icon-DarkSlate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#ad71a3')" id="frontPurple">
+        Purple <i class="bi bi-circle-half icon-Purple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#524c8b')" id="frontPurpleNavy">
+        Purple Navy <i class="bi bi-circle-half icon-PurpleNavy"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#4d3d7c')" id="frontGrape">
+        Grape <i class="bi bi-circle-half icon-Grape"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeFrontColor('#f8f8f8')" id="frontSmoke">
+        Smoke <i class="bi bi-circle-half icon-Smoke"></i>
+      </button>      
+    </div>
+Seam
+    <div>
+      
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#b12d5a')" id="seamPink">
+        Pink <i class="bi bi-file-zip icon-azalea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#cf747e')" id="seamCharm">
+        Charm <i class="bi bi-file-zip icon-Charm"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#c34966')" id="seamPopstar">
+        Popstar <i class="bi bi-file-zip icon-Popstar"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#d55163')" id="seamAzalea">
+        Azalea <i class="bi bi-file-zip icon-Azalea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#7a0c32')" id="seamClaret">
+        Claret <i class="bi bi-file-zip icon-Claret"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#a72126')" id="seamUpsdellRed">
+        Upsdell Red <i class="bi bi-file-zip icon-UpsdellRed"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#8b010d')" id="seamRed">
+        Red <i class="bi bi-file-zip icon-Red"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#790f19')" id="seamMaroon">
+        Maroon <i class="bi bi-file-zip icon-Maroon"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#460810')" id="seamRose">
+        Rose <i class="bi bi-file-zip icon-Rose"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#220b0a')" id="seamRootBeer">
+        Root Beer <i class="bi bi-file-zip icon-RootBeer"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#410e07')" id="seamBrown">
+        Brown <i class="bi bi-file-zip icon-Brown"></i>
+      </button>    
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#c05437')" id="seamBrown">
+        Light Brown <i class="bi bi-file-zip icon-LightBrown"></i>
+      </button> 
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#0c1315')" id="seamColeus">
+        Coleus <i class="bi bi-file-zip icon-Coleus"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#e98017')" id="seamOrange">
+        Orange <i class="bi bi-file-zip icon-Orange"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#a78a18')" id="seamDarkYellow">
+        Dark Yellow <i class="bi bi-file-zip icon-DarkYellow"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#c3951c')" id="seamGold">
+        Gold <i class="bi bi-file-zip icon-Gold"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#dca820')" id="seamGoldenrod">
+        Goldenrod <i class="bi bi-file-zip icon-Goldenrod"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#666338')" id="seamOlive">
+        Olive <i class="bi bi-file-zip icon-Olive"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#91a657')" id="seamMoss">
+        Moss <i class="bi bi-file-zip icon-Moss"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#59ba44')" id="seamGreenApple">
+        GreenApple <i class="bi bi-file-zip icon-GreenApple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#2F6F51')" id="seamGreen">
+        Green <i class="bi bi-file-zip icon-Green"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#5F9EA0')" id="seamCadet">
+        Cadet <i class="bi bi-file-zip icon-Cadet"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#1D7696" ')="" id="seamHydrangea">
+        Hydrangea <i class="bi bi-file-zip icon-Hydrangea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#17285C')" id="seamMidnight">
+        Midnight <i class="bi bi-file-zip icon-Midnight"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#558ebb')" id="seamLakeBlue">
+        Lake Blue <i class="bi bi-file-zip icon-LakeBlue"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#718a9e')" id="seamSlate">
+        Slate <i class="bi bi-file-zip icon-Slate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#274b53')" id="seamDarkSlate">
+        Dark Slate <i class="bi bi-file-zip icon-DarkSlate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#ad71a3')" id="seamPurple">
+        Purple <i class="bi bi-file-zip icon-Purple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#524c8b')" id="seamPurpleNavy">
+        Purple Navy <i class="bi bi-file-zip icon-PurpleNavy"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#4d3d7c')" id="seamGrape">
+        Grape <i class="bi bi-file-zip icon-Grape"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeSeamColor('#f8f8f8')" id="seamSmoke">
+        Smoke <i class="bi bi-file-zip icon-Smoke"></i>
+      </button>
+      
+    </div>
+Back
+    <div>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#cf747e')" id="backCharm">
+        Charm <i class="bi bi-circle-half icon-Charm"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#c34966')" id="backPopstar">
+        Popstar <i class="bi bi-circle-half icon-Popstar"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#d55163')" id="backAzalea">
+        Azalea <i class="bi bi-circle-half icon-Azalea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#7a0c32')" id="backClaret">
+        Claret <i class="bi bi-circle-half icon-Claret"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#a72126')" id="backUpsdellRed">
+        Upsdell Red <i class="bi bi-circle-half icon-UpsdellRed"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#8b010d')" id="backRed">
+        Red <i class="bi bi-circle-half icon-Red"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#790f19')" id="backMaroon">
+        Maroon <i class="bi bi-circle-half icon-Maroon"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#460810')" id="backRose">
+        Rose <i class="bi bi-circle-half icon-Rose"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#220b0a')" id="backRootBeer">
+        Root Beer <i class="bi bi-circle-half icon-RootBeer"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#410e07')" id="backBrown">
+        Brown <i class="bi bi-circle-half icon-Brown"></i>
+      </button>    
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#c05437')" id="backBrown">
+        Light Brown <i class="bi bi-circle-half icon-LightBrown"></i>
+      </button> 
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#0c1315')" id="backColeus">
+        Coleus <i class="bi bi-circle-half icon-Coleus"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#e98017')" id="backOrange">
+        Orange <i class="bi bi-circle-half icon-Orange"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#a78a18')" id="backDarkYellow">
+        Dark Yellow <i class="bi bi-circle-half icon-DarkYellow"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#c3951c')" id="backGold">
+        Gold <i class="bi bi-circle-half icon-Gold"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#dca820')" id="backGoldenrod">
+        Goldenrod <i class="bi bi-circle-half icon-Goldenrod"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#666338')" id="backOlive">
+        Olive <i class="bi bi-circle-half icon-Olive"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#91a657')" id="backMoss">
+        Moss <i class="bi bi-circle-half icon-Moss"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#59ba44')" id="backGreenApple">
+        GreenApple <i class="bi bi-circle-half icon-GreenApple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#2F6F51')" id="backGreen">
+        Green <i class="bi bi-circle-half icon-Green"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#5F9EA0')" id="backCadet">
+        Cadet <i class="bi bi-circle-half icon-Cadet"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#1D7696" ')="" id="backHydrangea">
+        Hydrangea <i class="bi bi-circle-half icon-Hydrangea"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#17285C')" id="backMidnight">
+        Midnight <i class="bi bi-circle-half icon-Midnight"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#558ebb')" id="backLakeBlue">
+        Lake Blue <i class="bi bi-circle-half icon-LakeBlue"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#718a9e')" id="backSlate">
+        Slate <i class="bi bi-circle-half icon-Slate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#274b53')" id="backDarkSlate">
+        Dark Slate <i class="bi bi-circle-half icon-DarkSlate"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#ad71a3')" id="backPurple">
+        Purple <i class="bi bi-circle-half icon-Purple"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#524c8b')" id="backPurpleNavy">
+        Purple Navy <i class="bi bi-circle-half icon-PurpleNavy"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#4d3d7c')" id="backGrape">
+        Grape <i class="bi bi-circle-half icon-Grape"></i>
+      </button>
+      <button type="button" class="btn btn-outline-dark" onclick="changeBackColor('#f8f8f8')" id="backSmoke">
+        Smoke <i class="bi bi-circle-half icon-Smoke"></i>
+      </button>
+      
+    </div>
+    <br>
+    <div>
+      Enter URL for your logo:
+      <input id="imageInput">
+      
+      <button type="button" class="btn btn-dark " onclick="setLogo()">
+        submit
+      </button>
+      <div id="image" style="background-size: cover; width: 100px; height: 100px; background-position: center center; background-repeat: no-repeat; background-image: url(&quot;https://iili.io/H9335F9.png&quot;);"> 
+      </div>
+      <br>
+      <p>If you need help building your logo, here are some hints: </p>
+      <p>- The image needs to be a square (equal width and height). </p>
+      <p>- The logo area on the produt is a circle, so make sure your logo is centered.</p>
+      <p>- The logo area on the produt is made of black rubber, so make sure your logo has a black background.</p>
+      <a href="https://www.remove.bg/t/change-background" target="_blank">Remove Image Background</a>
+      <p>If you have a logo already made, use this tool to add a black background.</p>
+      <a href="https://freeimage.host/" target="_blank">Get URL for Image</a>
+      <p>Host it on a free website to get the URL for the logo!</p>
+
+
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <div id="ball" style="margin-left: -700px; margin-bottom: -190px;">
+    <div id="container"> <canvas width="320" height="566" style="width: 481px; height: 850px;"></canvas></div>
+      </div>
+    </div>
+  </div>
+    <div>
+
+
+</div>
+</div>
+
+
+<script>
+var mesh;
+
+if (localStorage.getItem("logo")) {
+  console.log("logo already saved");
+} else {
+  localStorage.setItem("logo", "https://iili.io/g6uLBf.jpg");
+}
+
+if (localStorage.getItem("front")) {
+  console.log("front already saved");
+} else {
+  localStorage.setItem("front", "#b12d5a");
+}
+
+if (localStorage.getItem("seam")) {
+  console.log("seam already saved");
+} else {
+  localStorage.setItem("seam", "#0c1315");
+}
+
+if (localStorage.getItem("back")) {
+  console.log("back already saved");
+} else {
+  localStorage.setItem("back", "#b12d5a");
+}
+
+var ballImage = localStorage.getItem("logo");
+// var ballImage = "https://iili.io/g6uLBf.jpg";
+// var ballImage = "https://iili.io/g6YWx9.png"; //selkirk
+
+const texture = new THREE.TextureLoader().load(ballImage);
+var scene = new THREE.Scene();
+var topColor = localStorage.getItem("front");
+var bottomColor = localStorage.getItem("back");
+var middleColor = localStorage.getItem("seam");
+var image = "url(" + localStorage.getItem("logo") + ")";
+scene.name = "Scene";
+
+document.getElementById("image").style.backgroundImage = "url(" + image + ")";
+console.log(document.getElementById("image").style.backgroundImage);
+console.log(image);
+document.getElementById("image").style.backgroundImage = image;
+console.log(document.getElementById("image").style.backgroundImage);
+
+function setLogo() {
+  console.log(document.getElementById("imageInput").value);
+  // texture = new THREE.TextureLoader().load(ballImage);
+  image = document.getElementById("imageInput").value;
+  document.getElementById("image").style.backgroundImage = "url(" + image + ")";
+  localStorage.setItem("logo", document.getElementById("imageInput").value);
+  console.log("ballImage " + localStorage.getItem("logo"));
+  location.reload();
+}
+
+function changeFrontColor(color) {
+  topColor = color;
+  console.log("front " + color);
+  const element = document.getElementById("container");
+  localStorage.setItem("front", color);
+  location.reload();
+}
+
+function changeBackColor(color) {
+  bottomColor = color;
+  console.log("back " + color);
+  const element = document.getElementById("container");
+  localStorage.setItem("back", color);
+  location.reload();
+}
+
+function changeSeamColor(color) {
+  middleColor = color;
+  console.log("front " + color);
+  const element = document.getElementById("container");
+  localStorage.setItem("seam", color);
+  location.reload();
+}
+
+let container = document.getElementById("container"),
+  renderer,
+  camera,
+  pokeball,
+  stats;
+
+function init() {
+  let vw = window.innerWidth,
+    vh = window.innerHeight;
+
+  renderer = new THREE.WebGLRenderer({
+    alpha: true,
+  });
+  renderer.setSize(vw, vh);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.shadowMap.enabled = true;
+
+  camera = new THREE.PerspectiveCamera(45, vw / vh, 1, 1000);
+  camera.position.z = 120;
+  camera.position.x = -30;
+  camera.position.y = 20;
+  camera.lookAt(scene.position);
+  camera.name = "Camera";
+  scene.add(camera);
+
+  let controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+  container.appendChild(renderer.domElement);
+
+  window.addEventListener("resize", onResize, false);
+}
+
+function onResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function setupStats() {
+  stats = new Stats();
+  container.appendChild(stats.domElement);
+}
+
+function drawPokeball() {
+  let pokeball_size = 20,
+    pokeball_segments = 100;
+
+  pokeball = new THREE.Group();
+  pokeball.name = "Pokeball";
+
+  /**
+   * Upper side
+   */
+  let ballUpGeom = new THREE.SphereGeometry(
+      pokeball_size,
+      pokeball_segments,
+      pokeball_segments,
+      0,
+      Math.PI * 2,
+      0,
+      (Math.PI / 2) * 0.97
+    ),
+    ballUpClosingGeom = new THREE.CircleGeometry(
+      pokeball_size,
+      pokeball_segments
+    ),
+    ballUpMat = new THREE.MeshLambertMaterial({ color: topColor });
+
+  ballUpMat.side = THREE.DoubleSide;
+
+  let ballUp = new THREE.Mesh(ballUpGeom, ballUpMat);
+  ballUp.name = "Pokeball upper side";
+
+  // Closing
+  let ballUpClosing = new THREE.Mesh(ballUpClosingGeom, ballUpMat);
+  ballUpClosing.rotateX(THREE.Math.degToRad(90));
+  ballUpClosing.position.set(0, pokeball_size - pokeball_size * 0.95, 0);
+  ballUpClosing.name = "Pokeball upper closing";
+
+  /**
+   * Lower side
+   */
+  let ballDownGeom = new THREE.SphereGeometry(
+      pokeball_size,
+      pokeball_segments,
+      pokeball_segments,
+      0,
+      Math.PI * 2,
+      (Math.PI / 2) * 1.03,
+      Math.PI / 2
+    ),
+    ballDownClosingGeom = new THREE.CircleGeometry(
+      pokeball_size,
+      pokeball_segments
+    ),
+    ballDownMat = new THREE.MeshLambertMaterial({ color: bottomColor });
+
+  ballDownMat.side = THREE.DoubleSide;
+
+  let ballDown = new THREE.Mesh(ballDownGeom, ballDownMat);
+  ballDown.name = "Pokeball Lower side";
+
+  // Closing
+  let ballDownClosing = new THREE.Mesh(ballDownClosingGeom, ballDownMat);
+  ballDownClosing.rotateX(THREE.Math.degToRad(90));
+  ballDownClosing.position.set(0, -(pokeball_size - pokeball_size * 0.95), 0);
+  ballDownClosing.name = "Pokeball lower closing";
+
+  /**
+   * Inner side
+   */
+  let ballInnerGeom = new THREE.SphereGeometry(
+      pokeball_size * 0.99,
+      pokeball_segments,
+      pokeball_segments
+    ),
+    ballInnerMat = new THREE.MeshLambertMaterial({ color: middleColor });
+
+  let ballInner = new THREE.Mesh(ballInnerGeom, ballInnerMat);
+  ballInner.name = "Pokeball inner side";
+
+  /**
+   * Opening
+   */
+  let opening = new THREE.Group();
+  opening.name = "Opening";
+
+  // Outer
+  let openingOuterGeom = new THREE.CylinderGeometry(
+      8,
+      8,
+      2.5,
+      pokeball_segments
+    ),
+    openingOuterMat = new THREE.MeshLambertMaterial({ color: "black" });
+
+  let openingOuter = new THREE.Mesh(openingOuterGeom, openingOuterMat);
+  openingOuter.name = "Outer";
+
+  // Middle
+  let openingMiddleGeom = new THREE.CylinderGeometry(
+      7.5,
+      8,
+      1.2,
+      pokeball_segments
+    ),
+    openingMiddleMat = new THREE.MeshBasicMaterial({ map: texture });
+
+  let openingMiddle = new THREE.Mesh(openingMiddleGeom, openingMiddleMat);
+  openingMiddle.name = "Middle";
+  openingMiddle.position.y = 0.7;
+
+  //     // Inner
+  //     let openingInnerGeom = new THREE.CylinderGeometry(2, 2, 3, pokeball_segments),
+  //         openingInnerMat  = new THREE.MeshLambertMaterial({color: 'blue'});
+
+  //     let openingInner  = new THREE.Mesh(openingInnerGeom, openingInnerMat);
+  //     openingInner.name = 'Inner';
+  //     openingInner.position.y = 1;
+
+  opening.rotateX(THREE.Math.degToRad(0));
+  opening.rotateY(THREE.Math.degToRad(90));
+
+  opening.position.set(0, 19, 0);
+
+  opening.add(openingOuter);
+  opening.add(openingMiddle);
+  // opening.add(openingInner);
+
+  // Putting all together
+  pokeball.add(ballUp);
+  pokeball.add(ballUpClosing);
+  pokeball.add(ballDown);
+  pokeball.add(ballDownClosing);
+  pokeball.add(ballInner);
+  pokeball.rotateX(THREE.Math.degToRad(95));
+  pokeball.rotateZ(THREE.Math.degToRad(-10));
+
+  pokeball.add(opening);
+
+  console.log(pokeball.name);
+
+  scene.add(pokeball);
+}
+
+function setupLight() {
+  let ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
+  ambientLight.name = "Ambient Light";
+  scene.add(ambientLight);
+
+  let directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
+  directionalLight.name = "Directional Light";
+  directionalLight.position.set(30, 20, 50);
+  directionalLight.castShadow = true;
+  directionalLight.shadow.darkness = 1;
+  directionalLight.shadow.camera.right = 5;
+  directionalLight.shadow.camera.left = -5;
+  directionalLight.shadow.camera.top = 5;
+  directionalLight.shadow.camera.bottom = -5;
+  scene.add(directionalLight);
+
+  // let helper = new THREE.CameraHelper( directionalLight.shadow.camera );
+  // helper.name = 'DirectionalLight CameraHelper';
+  // scene.add( helper );
+}
+
+function render() {
+  renderer.render(scene, camera);
+  requestAnimationFrame(render);
+}
+
+init();
+setupLight();
+drawPokeball();
+render();
+
+var loader = new THREE.TextureLoader();
+loader.load(ballImage, function (texture) {
+  var geometry = new THREE.SphereGeometry(200, 20, 20);
+
+  var material = new THREE.MeshBasicMaterial({ map: texture, overdraw: 0.5 });
+  var mesh = new THREE.Mesh(geometry, material);
+});
+</script>
+
+
+
+  
+
+</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

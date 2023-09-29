@@ -1,650 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Bens.Work</title>
-
-    <!-- Bootstrap core CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 
-    <!-- Custom fonts for this template -->
-  <script src="https://unpkg.com/feather-icons"></script>
-
-    
-
-    <script
-      id="setmore_script"
-      type="text/javascript"
-      src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"
-    ></script>
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="stylesheets/new-age.min.css" rel="stylesheet">
   </head>
-  <body id='home'>
-
-    <!-- Navigation -->
-    <nav style='background-color: white' class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <img width='20%' height='20%' src="../images/NewLiftSVG.svg" alt="">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#intro" style='font-weight: bold; font-size: 15px;'>HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="#titleSubTop">SERVICES</a>
-            </li>
-            {{!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="/liftinsights">PRODUCTS</a>
-            </li> --}}
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="#about">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="#contact">CONTACT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" style='font-size: 15px; font-weight: bold' href="https://benmnewell.wixsite.com/website">SCHEDULE</a>
-            </li>
-          </ul>
+  <body class="container" style="max-width: 1200px">
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <div style="font-weight: bold">
+          <span class="fs-4"><img width='100px' src="../images/NewLiftSVG.svg" alt=""></span>
+          </br>
+          MISSION | PROVIDE LIFT
         </div>
-      </div>
-    </nav>
+      </a>
 
-    <section id='intro'class='fade-scroll' display='block' >
-      <div style='justify-content: center' class="container">
-        <div style='justify-content: center;' class="row">
-        </div>
-        <br>
-        <br>
-        <br>
-        <div>
-          <h1 id='title' style='color: #1B1B1E'>
-            OUR PROCESS
-          </h1>
-          <div style='width: 52vw; border-top: solid; border-color: #3f7bc7;'>
-          </div>
-          <h1 id='title'>
-           YOUR INSIGHTS
-          </h1>
-          <h3 id='titleSubTop'>
-            MISSION | PROVIDE LIFT<br><br>
-          </h3>
-          
-          <div class='row'>
-            {{!-- <div style='padding-top: 10px'> --}}
-              <button onClick= 'showTableau()' style="padding-top: 10px; height: 50px; width:300px; " type="button" class=" btn-success btn-lg btn-block  ">Tableau</button>
-              <div style='height: 10px'></div> &nbsp;
-              <button onClick= 'showWeb()' style="padding-top: 10px; height: 50px; width:300px; " type="button" class=" btn-primary btn-lg btn-block  ">Web Development</button>
+      {{!-- <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+      </ul> --}}
+    </header>
+  </div>
+  
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
-              {{!-- <button onClick= 'showOracle()' style="padding-top: 10px; height: 50px; width:300px; color: red" type="button" class=" btn-lg btn-block btn-dark">Oracle</button> --}}
-            {{!-- </div> --}}
-          </div>
-          <div class='row' style='height: 10px'>
-          </div>
-          <div href="#about" class='row'>
-            <button  onClick='showNewToAnalytics()'style="font-size:13px; height: 50px; width:300px" type="button" class=" btn-block  ">New to Data Analytics?</button>
-            <div style='height: 10px'></div> &nbsp;
-            <button  onClick='showNewToWeb()'style="font-size:13px; height: 50px; width:300px" type="button" class=" btn-block  ">New to Website Development?</button>
-          </div>&nbsp;
-        </div>
-        <br>
-        <div style='justify-content: center' class="row">
-          <div class="col-4">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div style='border-top: solid; border-color: white;'>
-    </div>
-
-    <section id='newToAnalytics' class='fade-scroll' style='background-color: white; display: none' >
-      <div style='justify-content: center' class="container">
-        <div style='justify-content: center;' class="row">
-        </div>
-        <br>
-        <br>
-        <br> 
-        <div>
-          <h1 id='title' style='color: #1F7FC3'>
-            NEW TO DATA ANALYTICS
-          </h1>
-        </div>
-        <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          {{!-- <div class="col-lg-1">
-          </div> --}}
-          <div class="col-lg-2">
-            <div class='row'>
-              <i  class="fa fa-file-text fa-2x" style='color: #1F7FC3'></i>&nbsp;&nbsp;
-              &nbsp;
-              <h3>Data Sources</h3>
-            </div>
-            <p>Data is the most important asset for businesses today. Whether you are pointing to text files, excel, SQL databases, NoSQL databases, or APIs we are here to help. </p>   
-            <div style='margin: auto; width: 60%; heigth: 1px; border-top: solid; border-color: #1F7FC3;'>
-            </div>
-            <div style='height: 15px'>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class='row'>
-              <i  class="fa fa-database fa-2x" style='color: #1F7FC3'></i>&nbsp;&nbsp;
-              &nbsp;
-              <h3>Data Storage</h3>
-            </div>
-            <p>Once the important data is identified and connected, identify a solution to house that data for easy access and manipulation.</p>
-            <div style='margin: auto; width: 60%; heigth: 1px; border-top: solid; border-color: #1F7FC3;'>
-            </div>
-            <div style='height: 15px'>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class='row'>
-              <i  class="fa fa-filter fa-2x" style='color: #1F7FC3'></i>&nbsp;&nbsp;
-              &nbsp;
-              <h3>Data Prep</h3>
-            </div>            
-            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
-            <div style='margin: auto; width: 60%; heigth: 1px; border-top: solid; border-color: #1F7FC3;'>
-            </div>
-            <div style='height: 15px'>
-            </div> 
-          </div>
-          <div class="col-lg-2">
-            <div class='row'>
-              <i  class="fa fa-bar-chart fa-2x" style='color: #1F7FC3'></i>&nbsp;&nbsp;
-              &nbsp;
-              <h3>Data Visualization</h3>
-            </div>           
-            <p>The human mind does not easily consume data in a table. Pull out KPIs and visually represent it. LiftKC uses cutting edge data visualization tools to create, automate, and present data on the fly and in a professional manner.</p>
-            
-            <div style='margin: auto; width: 60%; heigth: 1px; border-top: solid; border-color: #1F7FC3;'>
-            </div>
-            <div style='height: 15px'>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class='row'>
-              <i  class="fa fa-users fa-2x" style='color: #1F7FC3'></i>&nbsp;&nbsp;
-              &nbsp;
-              <h3>Distribution</h3>
-            </div>            
-            <p>Keep your end users in mind by putting distribution methods in place early. LiftKC will help you utilize Oracle, Tableau, or custom websites to give your customers insights on demand.</p>
-            <div style='margin: auto; width: 60%; heigth: 1px; border-top: solid; border-color: #1F7FC3;'>
-            </div>
-            <div style='height: 15px'>
-            </div>
-          </div>
-          {{!-- <div class="col-lg-1">
-          </div> --}}
-          <div style='width: 100%'>
-              <button  onClick='showNewToAnalytics()'style="background: #1F7FC3; border: 2px solid white; color: white; margin: auto; font-size:13px; height: 50px; width:50%" type="button" class=" btn-block btn-primary">HIDE</button>
-          </div>
-        </div>
-      </div>
-        <br>
-      </div>
-    </section>
-
-    <div style='border-top: solid; border-color: white;'>
-    </div>
-
-    <section id='TableauDetail' style='display: none; background-color: rgba(117, 226, 117, 0.685);'
-      class='fade-scroll' >
-          <div style='justify-content: center' class="container">
-        <div style='justify-content: center;' class="row">
-        </div>
-        <br>
-        <br>
-        <br> 
-        <div>
-          <h1 id='title' style='color: #1B1B1E'>
-            TABLEAU
-          </h1>
-        </div>
-        <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-3">
-            <div class=''>
-              <i  class="fa fa-file-text fa-3x"></i>&nbsp;&nbsp;
-            </div>
-            <h3>1. Tableau Prep</h3>
-            <p>Getting those dispurse datasources together can be complicated. Tableau Prep allows you to join and transform your datasets exactly how you need them. </p>
-            
-          </div>
-          <div class="col-lg-3">
-            <div class=''>
-              <i  class="fa fa-database fa-3x"></i>
-            </div>
-            <h3>2. Tableau Desktop</h3>
-            <p>Once your data is ready, point Tableau Desktop to your data for visual insights.</p>
-            
-          </div>
-          <div class="col-lg-3">
-            <div class=''>
-              <i  class="fa fa-filter fa-3x"></i>
-            </div>            
-            <h3>3. Tableau Server</h3>
-            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
-            
-          </div>
-          <div class="col-lg-3">
-            <div class=''>
-              <i  class="fa fa-filter fa-3x"></i>
-            </div>            
-            <h3>3. Tableau Portal</h3>
-            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
-            
-          </div>
-        </div>
-
-      </div>
-        <br>
-      </div>
-    </section>
-
-    <div style='border-top: solid; border-color: white;'>
-    </div>
-
-    <section id='Tableau' style='display: none; background-color: white;'
-      class='fade-scroll' >
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Tableau</h4>
+      <div class="col">
+        <img height= '300px' src="../images/benlogo.jpg" alt="Rounded circle Image" class="rounded-circle">
+        <h1 >Ben M. Newell, MBA</h1>
+      
+        {{!-- <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Website Consultation</h4>
           </div>
           <div class="card-body">
+            <h1 class="card-title pricing-card-title">$90<small class="text-body-secondary fw-light">/hr</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li style='font-weight: bold'>Tableau Desktop</li>
-              <li>-Data Visualization</li>
-              <li>-Report Development</li>
-              <li>-Data Exploration</li>
-              <br>
-              <li style='font-weight: bold'>Tableau Server</li>
-                <li>-Administration</li>
-                <li>-Publishing</li>
-                <li>-Automation</li>
-                <li>-Mobile distribution</li>
-                <li>-Email subscriptions</li>
-              <br>
-              <li style='font-weight: bold'>Tableau JavaScript API</li>
-              <li>-Custom enterprise portals</li>
+              <li style="font-weight: bold">10+ years with website building platforms</li>
+
+              <li>(Consultation only)</li>
+              <li>Empowering users through Wix and Shopify</li>
+              <li>Javascript, HTML, and CSS consultation</li>
+              <li>Hosting / domain consultation</li>
             </ul>
-            {{!-- <button onClick='showTableauDetail()' type="button" class=" btn-lg btn-block btn-primary">Learn More</button> --}}
+            <button type="button" class="w-100 btn btn-lg btn-light">Book Now</button>
           </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Your Pro</h4>
+        </div> --}}
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Full Stack Web Development</h4>
           </div>
           <div class="card-body">
-            <div style='margin: 0 auto' class="col-lg-4">
-            <img class="rounded-circle" src="../images/bens.png" alt="" width="140" height="140">
-          </div>
-          <h5>Ben M. Newell, MBA </h5>
+            <h1 class="card-title pricing-card-title">$100<small class="text-body-secondary fw-light">/hr</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>
-                <a href="https://www.tableau.com/support/certification">Tableau Desktop Qualified Associate</a> 
-              </li>
-              <br>
-              <li>10+ years of Analytical Development experience</li>
-              <br>
-              <li>4+ years of Analytical Training experience</li>
-              <br>
-              <li>4+ years Tableau Server customer support</li>
+              <li style="font-weight: bold">Certified Full Stack Developer</li>
+              <li>(Build and host website applications)</li>
+              <li>10+ years of website development</li>
+              <li>3+ years of REACT experience</li>
+              <li>Ability to build real time websites</li>
             </ul>
-            <h1 class="card-title pricing-card-title">$90 <small class="text-muted">/ hr</small>
+            <button onclick="location.href = 'https://www.liftkc.online/booking-calendar/full-stack-development-consulting'" type="button" class="w-100 btn btn-lg btn-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-success">
+          <div class="card-header text-bg-success  py-3">
+            <h4 class="my-0 fw-normal">Tableau (Business Intelligence)</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$90<small class="text-body-secondary fw-light">/hr</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li style="font-weight: bold">Certified Tableau Desktop</li>
+              <li style="font-weight: bold">Qualified Associate</li>
+
+              <li>10+ years of development experience</li>
+              <li>4+ years of analytical training experience</li>
+              <li>4+ years of Tableau Server customer support</li>
+            </ul>
+            <button onclick="location.href = 'https://www.liftkc.online/booking-calendar/tableau-consulting'" type="button" class="w-100 btn btn-lg btn-success">Book Now</button>
+          </div>
+        </div>
+      </div>
+      
+       
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h1 class="txt-eff">
+              <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">PORTFOLIO</span>
+              </span>
             </h1>
-            <button onclick="benConsulting()" type="button" class=" btn-lg btn-block btn-primary">Get started</button>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div style='border-top: solid; border-color: white;'>
-    </div> 
-
-    {{!-- <section id='OracleDetail' style='display: none; background-color: rgba(224, 80, 80, 0.671);'
-      class='fade-scroll' id='Oracle'>
-          <div style='justify-content: center' class="container">
-        <div style='justify-content: center;' class="row">
-        </div>
-        <br>
-        <br>
-        <br> 
-        <div>
-          <h1 id='title' style='color: #1B1B1E'>
-            ORACLE
-          </h1>
-        </div>
-        <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-1">
-          </div>
-          <div class="col-lg-2">
-            <div class=''>
-              <i  class="fa fa-file-text fa-3x"></i>&nbsp;&nbsp;
-            </div>
-            <h3>1. Data Sources</h3>
-            <p>Data is the most important asset for businesses today. Whether you are pointing to text files, excel, SQL databases, NoSQL databases, API we are here to help. </p>
-            
-          </div>
-          <div class="col-lg-2">
-            <div class=''>
-              <i  class="fa fa-database fa-3x"></i>
-            </div>
-            <h3>2. Data Storage</h3>
-            <p>Once the important data is identified and connected, identify a solution to house that data for easy access and manipulation.</p>
-            
-          </div>
-          <div class="col-lg-2">
-            <div class=''>
-              <i  class="fa fa-filter fa-3x"></i>
-            </div>            
-            <h3>3. Data Prep</h3>
-            <p>Not all data sources are formatted to perfection. There are plenty of tools out there to extract, transform, and load your data in perfect form.  </p>
-            
-          </div>
-          <div class="col-lg-2">
-            <div class=''>
-              <i  class="fa fa-bar-chart fa-3x"></i>&nbsp;&nbsp;
-              <i  class="fa fa-pie-chart fa-3x"></i>
-            </div>           
-            <h3>4. Data Visualization</h3>
-            <p>The human mind does not easily consume data in a table. Pull out KPIs and visually represent it. LiftKC uses cutting edge data visualization tools to create, automate, and present data on the fly and in a professional manner.</p>
-            
-          </div>
-          <div class="col-lg-2">
-            <div class=''>
-              <i  class="fa fa-users fa-3x"></i>&nbsp;&nbsp;
-            </div>            
-            <h3>5. Distribution</h3>
-            <p>Keep your end users in mind by putting distribution methods in place early. LiftKC will help you utilize Oracle, Tableau, or custom websites to give your customers insights on demand.</p>
-            
-          </div>
-          <div class="col-lg-1">
-          </div>
-        </div>
-
-      </div>
-        <br>
-      </div>
-    </section> --}}
-
-    <div style='border-top: solid; border-color: white;'>
-    </div>
-
-    <section id='Oracle' style='display: none; background-color: white;'
-      class='fade-scroll' >
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Oracle</h4>
           </div>
           <div class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li style='font-weight: bold'>Oracle Analytics Cloud (OAC)</li>
-              <li>-Data Visualization</li>
-              <li>-Report Development</li>
-              <li>-Dashboard Creation</li>
-              <li>-Automated Notifications</li>
-              <li>-Data Integration</li>
-              <li>-Data Modeling</li>
-              <li>-Mobile Capability</li>
-              <br>
-              <li style='font-weight: bold'>OBIEE (now packaged with Data Visualizer into the product OAC)</li>
-              <li>-Data Visualization</li>
-              <li>-Report Development</li>
-              <li>-Dashboard Creation</li>
-              <li>-Automated Notifications</li>
-              <li>-Data Integration</li>
-              <li>-Data Modeling</li>
-              <br>
-              <li style='font-weight: bold'>Data Visualizer (now packaged with OBIEE into the product OAC)</li>
-              <li>-Data Visualization</li>
-              <li>-Dashboard Creation</li>
-              {{!-- <br>
-              <li style='font-weight: bold'>Other Oracle Solutions</li>
-              <li>-Moving databases to Oracle Cloud (or new databases)
-              </li>
-              <li>-Utilizing Oracle Cloud storage for files</li>
-              <li>-More, more, more! Oracle Cloud has many other solutions!</li> --}}
-            </ul>
-            {{!-- <button onClick='ShowOracleDetail()'  type="button" class=" btn-lg btn-block btn-primary">Learn More</button> --}}
+            <h5>
+          Nike, Inc.
+          </h5>
+          <p>
+          Data Analytics Manager and Tableau Server Administrator
+          </p>
+          <h5>
+          Major League Pickleball
+          </h5>
+          <p>
+          React Application (Javascript, React, HTML, CSS, Heroku, Go Daddy)
+          </p>
+          <h5>
+          American Century Investments
+          </h5>
+          <p>
+          Embedded Analytics (Tableau Desktop, Tableau Server, Full Stack Development)
+          </p>       
           </div>
         </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Your Pro</h4>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+           <h1 class="txt-eff">
+              <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">ABOUT</span>
+              </span>
+            </h1>
           </div>
           <div class="card-body">
-            <div style='margin: 0 auto' class="col-lg-4">
-            <img class="rounded-circle" src="../images/zach.PNG" alt="" width="140" height="140">
-          </div>
-          <h5>Zach T. Newell, MBA </h5>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Oracle Analytics Cloud / OBIEE</li>
-              <br>
-              <li>
-                <a href="https://www.youracclaim.com/badges/52100f14-c821-4742-80ec-622885c9a2a5/public_url">Oracle Cloud Platform Enterprise Analytics 2018 Certified Associate</a> 
-              </li>
-              <br>
-              <li>5+ years of experience administrating OBIEE </li>
-            </ul>
-            <h1 class="card-title pricing-card-title">$90 <small class="text-muted">/ hr</small></h1>
-            <button onclick="zachConsulting()" type="button" class=" btn-lg btn-block btn-primary" >Get started</button>
+            
+            <p>
+            Ben has been a student of the Business Intelligence space for 10+ years and Full Stack Web Development for 5+ years.
+            </br></br>
+            He is versed in the Tableau Suite and obtained his Tableau Desktop Qualified Associate certification in 2019.
+            </br></br>
+            He has implemented multiple websites including React applications and loves to discuss strategy, business objectives, and user experience.
+            </p>      
           </div>
         </div>
       </div>
-    </section>
+      <div class="col">
 
-    <div style='border-top: solid; border-color: white;'>
-    </div> 
-
-    <section id='about' class='fade-scroll' display='block' >
-      <div style='justify-content: center' class="container">
-        <div style='justify-content: center;' class="row">
-        </div>
-        <br>
-        <br>
-        <br> 
-        <div>
-          <h1 id='title' style='color: #1B1B1E'>
-            TEAM LIFT
-          </h1>
-          <div style='width: 52vw; border-top: solid; border-color: #3f7bc7;'>
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h1 class="txt-eff">
+              <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">CONTACT</span>
+              </span>
+            </h1>
           </div>
-          <h1 id='title'>
-            WHO WE ARE
-          </h1>
-          </dir>
-        </div>
-        <br>
-        <div class='row'>
-          <div class="col">
-            <div class='row'>
-              <div class="col">
-                <img style='height: 210px' src='../images/bens.png'>
-              </div>
-              <div class="col">
-                <p style='font-weight: bold'>
-                  Ben Newell, MBA
-                </p>
-                <p style='font-weight: bold; color: #1B1B1E'>  
-                 Founder / Tableau Consultant
-                </p>
-                <p>
-                  Ben has been a student of the Business Intelligence space for 10+ years and recently added Full Stack Web Development to his qualifications.
-                </p>
-                <p>
-                  He is versed in the Tableau Suite and obtained his Tableau Desktop Qualified Associate certification in 2019.
-                </p>
-                <p>Ben loves to discuss strategy, business objectives, and user experience.
-                </p>
-                <div class='row'>
-                  <button onClick= 'showBenEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="  ">
-                    Previous Engagements
-                  </button>
-                  <br>
-                </div>
-                <div id='benEngagements' style='display: none;'>
-                    <br>
-                    <a>Data Analytics Manager</a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(SQL, Tableau Suite, Web Development) </a>
-                    <br>
-                    <br>
-                    <a>Tableau Consultant / Programmer</a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(Tableau Suite, AWS, Python, Web Development)</a>
-                    <br><br>
-	                  <a>Tableau Server Technical Analyst IV / Support </a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(Tableau Suite)</a>
-                    <br><br>
-	                  
-                    <div style='border-top: solid; border-color: white;'>
-                    </div> 
-                    <br>
-                </div>
-              </div>
-            </div>
-          </div>
-          {{!-- <div class="col">
-            <div class='row'>
-              <div class="col">
-                <img src='../images/zach.PNG'>
-              </div>
-              <div style='color: white'class="col">
-                <p style='font-weight: bold'>
-                  Zach Newell, MBA
-                </p>
-                <p style='font-weight: bold; color: #1B1B1E'>   
-                  Founder / Oracle Consultant
-                </p>
-                <p>
-                  Zach brings 7+ years of Oracle BI implementation experience to the team! 
-                </p>
-                <p>
-                  He received his certification in Oracle Analytics Cloud in 2017 and is heavily experienced with custom OBIEE 11g and 12c solutions. 
-                </p>
-                <p>
-                  He has directly supported Oracle Financials and HCM specializing in Oracle Security.
-                </p>
-                <p>
-                  Zach loves to discuss enterprise strategy related to system integration, data quality, and reporting solutions.
-                </p>
-                <div class='row'>
-                  <button onClick= 'showZachEngagements()' style="padding-top: 10px; font-size: 15px; height: 50px; width:300px" type="button" class="  ">
-                    Previous Engagements
-                  </button>
-                  <br>
-                </div>
-                <div id='zachEngagements' style='display: none;'>
-                    <br>
-                    <a>Oracle Insight & Cloud Strategy Program Manager</a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(OBIEE, Oracle Administrator (RPD), SQL, HTML/CSS)</a>
-                    <br><br>
-	                  <a>Senior Business Intelligence Analyst</a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(OBIEE, SQL, HTML/CSS)</a>
-                    <br><br>
-	                  <a>Business Systems Analyst</a>
-                    <br>
-                    <a style='color:#1B1B1E; font-size: 12px'>(OBIEE, Discoverer, SQL, Microsoft VBA) </a>
-                    <br>
-                    <br>
-                    <div style='border-top: solid; border-color: white;'>
-                    </div> 
-                    <br>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          
-        </div>
-        <div style='justify-content: center' class="row">
-          <div class="col-4">
+          <div class="card-body">
+            
+            <h5>
+              Phone (Text Only): 
+            </h5>     
+            <p>(785)633-5715</p>
+            <h5>
+              Email:
+            </h5>     
+            <p>ben_newell@liftkc.com</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
-    <div style='border-top: solid; border-color: white;'>
+    {{!-- <div class="col business-card" ontouchstart="this.classList.toggle('hover');"> 
+      <div class="flipper">
+        <div class="front">
+          <figure>
+            <img height= '300px' src="../images/Liftkc2.png">
+          </figure>
+        </div>
+        <div class="back">
+          <figure>
+            <img height= '300px' src="../images/liftkc.png">
+          </figure>
+        </div>
+      </div>
+    </div> --}}
+    </div>
+    <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Lift LLC</span>
     </div>
 
-    <footer>     
-      <div id='contact' class="container">
-        <p>&copy; Created by Lift LLC. All Rights Reserved.</p>
-        <p>(785) 633-5715 (text only)</p>
-        <a href="mailto:ben_newell@liftkc.com">ben_newell@liftkc.com</a>
-      </div>
-    </footer>
 
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="javascripts/new-age.min.js"></script>
-    <script src="javascripts/navigation.js"></script>
-
-    <!-- Check images before project page gets rendered! -->
-    <script>
-      feather.replace()
-    </script>
-    <script class="js">
-    </script>
+  </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../public/javascripts/navigation.js"></script>
   </body>
-
 </html>
-
-{{!-- Save for refrence --}}
-
-    {{!-- <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-7 my-auto">
-            <div class="header-content mx-auto"> --}}
-              {{!-- <img class="img-circle" src="https://media.licdn.com/dms/image/C5603AQH3bf6tVzfzDA/profile-displayphoto-shrink_200_200/0?e=1535587200&v=beta&t=Uu8k1tREG6TC4vTSwdXqjckCXa0Jp49KqSpe00IFujU" alt=""></img>
-              <div class="social">
-                <br>
-                <a style='color: rgba(246, 248, 250, 0.644)' href="https://www.linkedin.com/in/ben-newell-mba/"><i id="linkedin" class="fa fa-3x fa-linkedin"></i></a>
-                <a style='color: rgba(246, 248, 250, 0.644)' href="https://github.com/BenNewell32"><i id="github" class="fa fa-3x fa-github"></i></a>
-                <a style='color: rgba(246, 248, 250, 0.644)' href=""><i id="twitter" class="fa fa-3x fa-twitch"></i></a>
-                <a style='color: rgba(246, 248, 250, 0.644)' href="mailto:ben.m.newell@gmail.com"><i id="mail" class="fa fa-3x fa-envelope "></i></a>
-              </div> --}}
-            {{!-- </div>
-          </div>
-        </div>
-      </div> --}}
-    {{!-- </header> --}}
