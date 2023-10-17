@@ -13,6 +13,10 @@ var pickleballRouter = require("./routes/pickleball");
 var picklepodzRouter = require("./routes/picklepodz");
 var projectsRouter = require("./routes/projects");
 var liftInsightsRouter = require("./routes/liftinsights");
+var addImagesRouter = require("./routes/addImages");
+var postChallengerImagesRouter = require("./routes/postChallengerImages");
+var postPremierImagesRouter = require("./routes/postPremierImages");
+
 const puppeteer = require("puppeteer");
 
 var app = express();
@@ -33,6 +37,10 @@ app.use("/picklepodz", picklepodzRouter);
 app.use("/api", apiRouter);
 app.use("/projects", projectsRouter);
 app.use("/liftinsights", liftInsightsRouter);
+app.use("/addImages", addImagesRouter);
+app.use("/postChallengerImages", postChallengerImagesRouter);
+app.use("/postPremierImages", postPremierImagesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

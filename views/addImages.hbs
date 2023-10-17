@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='icon'
+          type='image/ico'
+          href='/images/favicon.ico'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>Premier Bracket Upload</h1>
+        <form action="postPremierImages" method="POST" enctype="multipart/form-data">
+            <div class="'file-field input-field">
+                <div class="btn grey">
+                    <span>File</span>
+                    <input name='myImage' type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate"
+                    type="text">
+                </div>
+            </div>
+            <button class='btn'type="submit">Submit</button>
+        </form>
+        <img height='300px' src="/uploads/mlp2023.5.premier.jpg">
+    </div>
+    
+    <div class="container">
+        <h1>Challenger Bracket Upload</h1>
+        <form action="postChallengerImages" method="POST" enctype="multipart/form-data">
+            <div class="'file-field input-field">
+                <div class="btn grey">
+                    <span>File</span>
+                    <input name='myImage2' type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate"
+                    type="text">
+                </div>
+            </div>
+            <button class='btn'type="submit">Submit</button>
+            <img height='300px' src="/uploads/mlp2023.5.challenger.jpg">
+
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
