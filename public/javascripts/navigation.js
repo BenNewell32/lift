@@ -346,8 +346,17 @@ function reveal() {
   }
 }
 
+function hideArrow() {
+  var arrows = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrows.length; i++) {
+    arrows[i].classList.add("inactive");
+  }
+}
+
 if (window.screen.width >= 724) {
   window.addEventListener("load", reveal);
+  window.addEventListener("load", hideArrow);
+  window.addEventListener("scroll", reveal);
 } else {
   window.addEventListener("scroll", reveal);
 }
