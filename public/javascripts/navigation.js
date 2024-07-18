@@ -16,8 +16,8 @@ function yana() {
 
   var t = document.getElementById("pro");
   t.style.display = "none";
-  var u = document.getElementById("follow");
-  u.style.display = "none";
+  // var u = document.getElementById("follow");
+  // u.style.display = "none";
 
   $("html, body")
     .delay(100)
@@ -26,7 +26,7 @@ function yana() {
     document.getElementById("liftbutton").classList.remove("active")
     document.getElementById("bennybutton").classList.remove("active")
     document.getElementById("probutton").classList.remove("active")
-    document.getElementById("followbutton").classList.remove("active")
+    // document.getElementById("followbutton").classList.remove("active")
 
     document.getElementById("yanabutton").classList.add("active")
 
@@ -48,8 +48,8 @@ function benny() {
   var t = document.getElementById("pro");
   t.style.display = "none";
 
-  var u = document.getElementById("follow");
-  u.style.display = "none";
+  // var u = document.getElementById("follow");
+  // u.style.display = "none";
 
   $("html, body")
     .delay(100)
@@ -57,7 +57,7 @@ function benny() {
     document.getElementById("liftbutton").classList.remove("active")
     document.getElementById("yanabutton").classList.remove("active")
     document.getElementById("probutton").classList.remove("active")
-    document.getElementById("followbutton").classList.remove("active")
+    // document.getElementById("followbutton").classList.remove("active")
 
     document.getElementById("bennybutton").classList.add("active")
 }
@@ -76,8 +76,8 @@ function lift() {
 
   var t = document.getElementById("pro");
   t.style.display = "none";
-  var u = document.getElementById("follow");
-  u.style.display = "none";
+  // var u = document.getElementById("follow");
+  // u.style.display = "none";
 
   $("html, body")
     .delay(100)
@@ -86,7 +86,7 @@ function lift() {
     document.getElementById("bennybutton").classList.remove("active")
     document.getElementById("yanabutton").classList.remove("active")
     document.getElementById("probutton").classList.remove("active")
-    document.getElementById("followbutton").classList.remove("active")
+    // document.getElementById("followbutton").classList.remove("active")
 
     document.getElementById("liftbutton").classList.add("active")
 }
@@ -105,8 +105,8 @@ function pro() {
 
   var t = document.getElementById("lift");
   t.style.display = "none";
-  var u = document.getElementById("follow");
-  u.style.display = "none";
+  // var u = document.getElementById("follow");
+  // u.style.display = "none";
 
   $("html, body")
     .delay(100)
@@ -115,39 +115,39 @@ function pro() {
     document.getElementById("liftbutton").classList.remove("active")
     document.getElementById("yanabutton").classList.remove("active")
     document.getElementById("bennybutton").classList.remove("active")
-    document.getElementById("followbutton").classList.remove("active")
+    // document.getElementById("followbutton").classList.remove("active")
 
     document.getElementById("probutton").classList.add("active")
 }
 
-function follow() {
-  var x = document.getElementById("follow");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById("yana");
-  y.style.display = "none";
-  var z = document.getElementById("benny");
-  z.style.display = "none";
+// function follow() {
+//   var x = document.getElementById("follow");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+//   var y = document.getElementById("yana");
+//   y.style.display = "none";
+//   var z = document.getElementById("benny");
+//   z.style.display = "none";
 
-  var t = document.getElementById("pro");
-  t.style.display = "none";
-  var u = document.getElementById("lift");
-  u.style.display = "none";
+//   var t = document.getElementById("pro");
+//   t.style.display = "none";
+//   var u = document.getElementById("lift");
+//   u.style.display = "none";
 
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#yana").offset().top }, 1000);
+//   $("html, body")
+//     .delay(100)
+//     .animate({ scrollTop: $("#yana").offset().top }, 1000);
 
-    document.getElementById("liftbutton").classList.remove("active")
-    document.getElementById("yanabutton").classList.remove("active")
-    document.getElementById("probutton").classList.remove("active")
-    document.getElementById("bennybutton").classList.remove("active")
+//     document.getElementById("liftbutton").classList.remove("active")
+//     document.getElementById("yanabutton").classList.remove("active")
+//     document.getElementById("probutton").classList.remove("active")
+//     document.getElementById("bennybutton").classList.remove("active")
 
-    document.getElementById("followbutton").classList.add("active")
-}
+//     document.getElementById("followbutton").classList.add("active")
+// }
 
 
 function reveal() {
