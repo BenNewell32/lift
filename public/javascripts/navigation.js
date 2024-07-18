@@ -1,3 +1,7 @@
+// function route(){
+//   alert(location)
+// }
+
 function yana() {
   var x = document.getElementById("yana");
   if (x.style.display === "none") {
@@ -27,6 +31,7 @@ function yana() {
     document.getElementById("yanabutton").classList.add("active")
 
 }
+
 
 function benny() {
   var x = document.getElementById("benny");
