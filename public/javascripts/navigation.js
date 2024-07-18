@@ -1,336 +1,149 @@
-function yanaAbout() {
-  var x = document.getElementById("yanaAbout");
+function yana() {
+  var x = document.getElementById("yana");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  var y = document.getElementById("yanaSponsors");
+  var y = document.getElementById("lift");
   y.style.display = "none";
-  var z = document.getElementById("yanaLessons");
+  var z = document.getElementById("benny");
   z.style.display = "none";
 
-  var t = document.getElementById("benAbout");
+  var t = document.getElementById("pro");
   t.style.display = "none";
-
-  var q = document.getElementById("benSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("benLessons");
-  r.style.display = "none";
+  var u = document.getElementById("follow");
+  u.style.display = "none";
 
   $("html, body")
     .delay(100)
     .animate({ scrollTop: $("#yana").offset().top }, 1000);
+
+    document.getElementById("liftbutton").classList.remove("active")
+    document.getElementById("bennybutton").classList.remove("active")
+    document.getElementById("probutton").classList.remove("active")
+    document.getElementById("followbutton").classList.remove("active")
+
+    document.getElementById("yanabutton").classList.add("active")
+
 }
 
-function yanaLessons() {
-  var x = document.getElementById("yanaLessons");
+function benny() {
+  var x = document.getElementById("benny");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  var y = document.getElementById("yanaAbout");
+  var y = document.getElementById("lift");
   y.style.display = "none";
-  var z = document.getElementById("yanaSponsors");
+  var z = document.getElementById("yana");
   z.style.display = "none";
 
-  var t = document.getElementById("benAbout");
+  var t = document.getElementById("pro");
   t.style.display = "none";
 
-  var q = document.getElementById("benSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("benLessons");
-  r.style.display = "none";
+  var u = document.getElementById("follow");
+  u.style.display = "none";
 
   $("html, body")
     .delay(100)
     .animate({ scrollTop: $("#yana").offset().top }, 1000);
+    document.getElementById("liftbutton").classList.remove("active")
+    document.getElementById("yanabutton").classList.remove("active")
+    document.getElementById("probutton").classList.remove("active")
+    document.getElementById("followbutton").classList.remove("active")
+
+    document.getElementById("bennybutton").classList.add("active")
 }
 
-function yanaSponsors() {
-  var x = document.getElementById("yanaSponsors");
+function lift() {
+  var x = document.getElementById("lift");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  var y = document.getElementById("yanaAbout");
+  var y = document.getElementById("yana");
   y.style.display = "none";
-  var z = document.getElementById("yanaLessons");
+  var z = document.getElementById("benny");
   z.style.display = "none";
 
-  var t = document.getElementById("benAbout");
+  var t = document.getElementById("pro");
   t.style.display = "none";
-
-  var q = document.getElementById("benSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("benLessons");
-  r.style.display = "none";
+  var u = document.getElementById("follow");
+  u.style.display = "none";
 
   $("html, body")
     .delay(100)
     .animate({ scrollTop: $("#yana").offset().top }, 1000);
+
+    document.getElementById("bennybutton").classList.remove("active")
+    document.getElementById("yanabutton").classList.remove("active")
+    document.getElementById("probutton").classList.remove("active")
+    document.getElementById("followbutton").classList.remove("active")
+
+    document.getElementById("liftbutton").classList.add("active")
 }
 
-function benAbout() {
-  var x = document.getElementById("benAbout");
+function pro() {
+  var x = document.getElementById("pro");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  var y = document.getElementById("benSponsors");
+  var y = document.getElementById("yana");
   y.style.display = "none";
-  var z = document.getElementById("benLessons");
+  var z = document.getElementById("benny");
   z.style.display = "none";
 
-  var t = document.getElementById("yanaAbout");
+  var t = document.getElementById("lift");
   t.style.display = "none";
-
-  var q = document.getElementById("yanaSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("yanaLessons");
-  r.style.display = "none";
+  var u = document.getElementById("follow");
+  u.style.display = "none";
 
   $("html, body")
     .delay(100)
-    .animate({ scrollTop: $("#ben").offset().top }, 1000);
+    .animate({ scrollTop: $("#yana").offset().top }, 1000);
+
+    document.getElementById("liftbutton").classList.remove("active")
+    document.getElementById("yanabutton").classList.remove("active")
+    document.getElementById("bennybutton").classList.remove("active")
+    document.getElementById("followbutton").classList.remove("active")
+
+    document.getElementById("probutton").classList.add("active")
 }
 
-function benLessons() {
-  var x = document.getElementById("benLessons");
+function follow() {
+  var x = document.getElementById("follow");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
-  var y = document.getElementById("benAbout");
+  var y = document.getElementById("yana");
   y.style.display = "none";
-  var z = document.getElementById("benSponsors");
+  var z = document.getElementById("benny");
   z.style.display = "none";
 
-  var t = document.getElementById("yanaAbout");
+  var t = document.getElementById("pro");
   t.style.display = "none";
-
-  var q = document.getElementById("yanaSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("yanaLessons");
-  r.style.display = "none";
+  var u = document.getElementById("lift");
+  u.style.display = "none";
 
   $("html, body")
     .delay(100)
-    .animate({ scrollTop: $("#ben").offset().top }, 1000);
+    .animate({ scrollTop: $("#yana").offset().top }, 1000);
+
+    document.getElementById("liftbutton").classList.remove("active")
+    document.getElementById("yanabutton").classList.remove("active")
+    document.getElementById("probutton").classList.remove("active")
+    document.getElementById("bennybutton").classList.remove("active")
+
+    document.getElementById("followbutton").classList.add("active")
 }
 
-function calendar() {
-  var x = document.getElementById("calendar");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById("benAbout");
-  y.style.display = "none";
-  var z = document.getElementById("benSponsors");
-  z.style.display = "none";
-
-  var t = document.getElementById("yanaAbout");
-  t.style.display = "none";
-
-  var q = document.getElementById("yanaSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("yanaLessons");
-  r.style.display = "none";
-  var s = document.getElementById("timelineContainer");
-  s.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#calendar").offset().top }, 1000);
-}
-function timelineContainer() {
-  var x = document.getElementById("timelineContainer");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById("benAbout");
-  y.style.display = "none";
-  var z = document.getElementById("benSponsors");
-  z.style.display = "none";
-
-  var t = document.getElementById("yanaAbout");
-  t.style.display = "none";
-
-  var q = document.getElementById("yanaSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("yanaLessons");
-  r.style.display = "none";
-  var s = document.getElementById("calendar");
-  s.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#calendar").offset().top }, 1000);
-}
-function benSponsors() {
-  var x = document.getElementById("benSponsors");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById("benAbout");
-  y.style.display = "none";
-  var z = document.getElementById("benLessons");
-  z.style.display = "none";
-
-  var t = document.getElementById("yanaAbout");
-  t.style.display = "none";
-
-  var q = document.getElementById("yanaSponsors");
-  q.style.display = "none";
-  var r = document.getElementById("yanaLessons");
-  r.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#ben").offset().top }, 1000);
-}
-
-function showNewToAnalytics() {
-  var x = document.getElementById("newToAnalytics");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-  var y = document.getElementById("Oracle");
-  y.style.display = "none";
-  var z = document.getElementById("Tableau");
-  z.style.display = "none";
-
-  var t = document.getElementById("TableauDetail");
-  t.style.display = "none";
-
-  var q = document.getElementById("OracleDetail");
-  q.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#oracleButton").offset().top }, 1000);
-}
-
-function showTableau() {
-  var x = document.getElementById("newToAnalytics");
-  x.style.display = "none";
-  var y = document.getElementById("Oracle");
-  y.style.display = "none";
-  var z = document.getElementById("Tableau");
-  if (z.style.display === "none") {
-    z.style.display = "block";
-  } else {
-    z.style.display = "none";
-  }
-
-  var t = document.getElementById("TableauDetail");
-  t.style.display = "none";
-
-  var q = document.getElementById("OracleDetail");
-  q.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#oracleButton").offset().top }, 1000);
-}
-
-function showOracle() {
-  var x = document.getElementById("newToAnalytics");
-  x.style.display = "none";
-  var y = document.getElementById("Oracle");
-
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-  var z = document.getElementById("Tableau");
-  z.style.display = "none";
-
-  var q = document.getElementById("TableauDetail");
-  q.style.display = "none";
-
-  var t = document.getElementById("OracleDetail");
-  t.style.display = "none";
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#oracleButton").offset().top }, 1000);
-}
-
-function showTableauDetail() {
-  var y = document.getElementById("TableauDetail");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#TableauDetail").offset().top }, 1000);
-}
-
-function ShowOracleDetail() {
-  var y = document.getElementById("OracleDetail");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#OracleDetail").offset().top }, 1000);
-}
-
-function benConsulting() {
-  window.location.href =
-    "https://www.liftkc.online/book-online/tableau-consulting";
-}
-
-function zachConsulting() {
-  window.location.href =
-    "https://www.liftkc.online/book-online/oracle-consulting";
-}
-
-function showBenEngagements() {
-  var y = document.getElementById("benEngagements");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#benEngagements").offset().top }, 1000);
-}
-
-function showZachEngagements() {
-  var y = document.getElementById("zachEngagements");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-
-  $("html, body")
-    .delay(100)
-    .animate({ scrollTop: $("#zachEngagements").offset().top }, 1000);
-}
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");

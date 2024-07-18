@@ -1,58 +1,45 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <script src="/javascripts/navigation.js"></script>
 
-  </head>
-  <body class="container" style="max-width: 1200px">
-    <div class="container">
-      <header
-        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
-      >
-        <a
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-        >
-          <svg class="bi me-2" width="40" height="32"><use
-              xlink:href="#bootstrap"
-            ></use></svg>
-          <div style="font-weight: bold">
-            <span class="fs-4"><img
-                width="100px"
-                src="../images/NewLiftSVG.svg"
-                alt=""
-              /></span>
-            <div></div>
-            MISSION | PROVIDE LIFT
-          </div>
-        </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <script src="/javascripts/navigation.js"></script>
 
-        {{! <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-      </ul> }}
-      </header>
-    </div>
+</head>
+
+<body class="container" style="caret-color: transparent;">
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <div style="font-weight: bold">
+          <span class="fs-4"><img width="100px" src="../images/NewLiftSVG.svg" alt="" /></span>
+          <div></div>
+          MISSION | PROVIDE LIFT
+        </div>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li onclick="lift()" class="nav-item"><a id="liftbutton" class="nav-link active" aria-current="page">LiftKC</a></li>
+        <li onclick="benny()" class="nav-item"><a id="bennybutton" class="nav-link">BennyBombs</a></li>
+        <li onclick="yana()" class="nav-item"><a id="yanabutton" class="nav-link">Yana Bear</a></li>
+        <li onclick="pro()" class="nav-item"><a id="probutton"class="nav-link">Pro Tour</a></li>
+        <li onclick="follow()" class="nav-item"><a id="followbutton"class="nav-link">Contact / Follow</a></li>
+      </ul>
+    </header>
+  </div>
+  <div id="lift" >
 
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
       <div class="col">
-        <img
-          height="300px"
-          src="../images/benlogo.jpg"
-          alt="Rounded circle Image"
-          class="rounded-circle"
-        />
+        <img height="300px" src="../images/benlogo.jpg" alt="Rounded circle Image" class="rounded-circle" />
         <h1>Ben M. Newell, MBA</h1>
         <div id="arrow">
           <div class="arrow bounce" style="margin-bottom: 50px"></div>
@@ -62,15 +49,12 @@
         <div class="card mb-4 rounded-3 shadow-sm">
           <div
             style=" min-height: 75px; background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('/images/react2.png'); background-size: cover"
-            class="card-header py-3 text-bg-primary border-primary"
-          >
+            class="card-header py-3 text-bg-primary border-primary">
             <h4 style="font-weight: 700" class="my-0">Everything Web </h4>
             <h7 style="font-weight: 700" class="my-0">React | APIs | Databases</h7>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$100<small
-                class="text-body-secondary fw-light"
-              >/hr</small></h1>
+            <h1 class="card-title pricing-card-title">$90<small class="text-body-secondary fw-light">/hr</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li style="font-weight: bold">Certified Full Stack Developer</li>
               <li>(Build and host website applications)</li>
@@ -80,19 +64,14 @@
             </ul>
             <button
               onclick="location.href = 'https://www.liftkc.online/booking-calendar/full-stack-development-consulting'"
-              type="button"
-              class="w-100 btn btn-lg btn-primary"
-            >Book Now</button>
+              type="button" class="w-100 btn btn-lg btn-primary">Book Now</button>
           </div>
         </div>
       </div>
       <div class="col reveal">
         <div class="card mb-4 rounded-3 shadow-sm">
-          <div
-            style="min-height: 75px; background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('/images/tableau.jpg');
- background-size: cover"
-            class="card-header py-3"
-          >
+          <div style="min-height: 75px; background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) ), url('/images/tableau.jpg');
+ background-size: cover" class="card-header py-3">
             <h4 style="font-weight: 700; color: white" class="my-0">Everything
               Tableau</h4>
             <h7 style="font-weight: 700; color: white" class="my-0">Desktop |
@@ -100,9 +79,7 @@
 
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$90<small
-                class="text-body-secondary fw-light"
-              >/hr</small></h1>
+            <h1 class="card-title pricing-card-title">$90<small class="text-body-secondary fw-light">/hr</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li style="font-weight: bold">Certified Tableau Desktop</li>
               <li style="font-weight: bold">Qualified Associate</li>
@@ -111,11 +88,8 @@
               <li>4+ years of analytical training experience</li>
               <li>4+ years of Tableau Server customer support</li>
             </ul>
-            <button
-              onclick="location.href = 'https://www.liftkc.online/booking-calendar/tableau-consulting'"
-              type="button"
-              class="w-100 btn btn-lg btn-dark"
-            >Book Now</button>
+            <button onclick="location.href = 'https://www.liftkc.online/booking-calendar/tableau-consulting'"
+              type="button" class="w-100 btn btn-lg btn-dark">Book Now</button>
           </div>
         </div>
       </div>
@@ -129,10 +103,7 @@
             <h1 class="txt-eff">
               <span class="text-wrapper">
                 <span class="line line1"></span>
-                <span
-                  style="font-weight: bold; color: #3f7bc7"
-                  class="letters"
-                >PORTFOLIO</span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">PORTFOLIO</span>
               </span>
             </h1>
           </div>
@@ -165,10 +136,7 @@
             <h1 class="txt-eff">
               <span class="text-wrapper">
                 <span class="line line1"></span>
-                <span
-                  style="font-weight: bold; color: #3f7bc7"
-                  class="letters"
-                >ABOUT</span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">ABOUT</span>
               </span>
             </h1>
           </div>
@@ -197,10 +165,7 @@
             <h1 class="txt-eff">
               <span class="text-wrapper">
                 <span class="line line1"></span>
-                <span
-                  style="font-weight: bold; color: #3f7bc7"
-                  class="letters"
-                >CONTACT</span>
+                <span style="font-weight: bold; color: #3f7bc7" class="letters">CONTACT</span>
               </span>
             </h1>
           </div>
@@ -221,30 +186,40 @@
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
     </div>
-    <div id="gb_widget"><img src="https://app.facilityally.com/images/loading.gif" style="margin: 0 auto"></div><script src="https://app.facilityally.com/embed.js"></script><script>load_gb_widget({url:"https://app.facilityally.com/book/liftkc/all-touring-pros/all",width:"auto"});</script>
-    <div class="container">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="/"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          >
-            <svg class="bi" width="30" height="24"><use
-                xlink:href="#bootstrap"
-              ></use></svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Lift LLC</span>
-        </div>
+  </div>
+  {{!-- <div id="gb_widget"><img src="https://app.facilityally.com/images/loading.gif" style="margin: 0 auto"></div>
+  <script src="https://app.facilityally.com/embed.js"></script>
+  <script>load_gb_widget({ url: "https://app.facilityally.com/book/liftkc/all-touring-pros/all", width: "auto" });</script>
+  --}}
+  <div id="benny" style="display: none">
+    Benny Bombs
+  </div>
+  <div id="yana" style="display: none">
+    Yana Bear
+  </div>
+  <div id="pro" style="display: none">
+    Pro Tour
+  </div>
+  <div id="follow" style="display: none">
+    Follow / Contact
+  </div>
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Lift LLC</span>
+      </div>
 
-      </footer>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../public/javascripts/navigation.js"></script>
-  </body>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="../public/javascripts/navigation.js"></script>
+</body>
+
 </html>
