@@ -10,6 +10,10 @@ var fetch = require("node-fetch");
 var indexRouter = require("./routes/index");
 var apiRouter = require("./routes/api");
 var pickleballRouter = require("./routes/pickleball");
+var bennybombsRouter = require("./routes/bennybombs");
+var yanabearRouter = require("./routes/yanabear");
+var protourRouter = require("./routes/protour");
+
 var picklepodzRouter = require("./routes/picklepodz");
 var projectsRouter = require("./routes/projects");
 var liftInsightsRouter = require("./routes/liftinsights");
@@ -33,6 +37,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/pickleball", pickleballRouter);
+app.use("/bennybombs", bennybombsRouter);
+app.use("/yanabear", yanabearRouter);
+app.use("/protour", protourRouter);
+
 app.use("/picklepodz", picklepodzRouter);
 app.use("/api", apiRouter);
 app.use("/projects", projectsRouter);
