@@ -5,289 +5,866 @@
   <meta charset="UTF-8">
   <title>CodePen - Space Parallax Scrolling</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    @media only screen and (min-width: 768px) and (max-width: 10000px) {
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(#000000, #3e4044);
-      overflow-x: hidden;
-    }
+      body {
+        min-height: 100vh;
+        background: linear-gradient(#000000, #3e4044);
+        overflow-x: hidden;
+      }
 
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 30px 100px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10000;
-    }
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+      }
 
-    header .logo {
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 2em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+      header .logo {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
 
-    header ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    header ul li {
-      list-style: none;
-      margin-left: 20px;
-    }
+      header ul li {
+        list-style: none;
+        margin-left: 20px;
+      }
 
-    header ul li a {
-      text-decoration: none;
-      padding: 6px 15px;
-      color: #fff;
-      border-radius: 20px;
-    }
+      header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: #fff;
+        border-radius: 20px;
+      }
 
-    header ul li a:hover,
-    header ul li a.active {
-      background: #fff;
-      color: #2b1055;
-    }
+      header ul li a:hover,
+      header ul li a.active {
+        background: #fff;
+        color: #2b1055;
+      }
 
-    section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      padding: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
 
-    section::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100px;
-      background: linear-gradient(to top, #1c0522, transparent);
-      z-index: 998;
-    }
+      section::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #1c0522, transparent);
+        z-index: 998;
+      }
 
-    section img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-    }
+      section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
 
-    section img#moon {
-      mix-blend-mode: screen;
-    }
+      section img#moon {
+        mix-blend-mode: screen;
+      }
 
-    section img#mountains_front {
-      z-index: 10;
-    }
+      section img#mountains_front {
+        z-index: 10;
+      }
 
-    #text {
-      position: absolute;
-      right: -350px;
-      color: #fff;
-      white-space: nowrap;
-      font-size: 7.5vw;
-      z-index: 9;
-    }
+      #text {
+        position: absolute;
+        right: -350px;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 7.5vw;
+        z-index: 9;
+      }
 
-    #btn {
+      #btn {
 
-      z-index: 999;
-      transform: translateY(100px);
-    }
+        z-index: 999;
+        transform: translateY(100px);
+      }
 
-    #btntop {
-      text-decoration: none;
-      display: inline-block;
-      padding: 8px 30px;
-      border-radius: 40px;
-      background: #fff;
-      color: #2b1055;
-      font-size: 1.5em;
-      z-index: 999;
-      transform: translateY(100px);
-    }
-
-
-    #sec {
-      position: relative;
-      padding: 25px;
-      background: black;
-    }
-
-    #sec h2 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    #sec p {
-      font-size: 1em;
-      color: #fff;
-    }
-
-    #sec2 {
-      position: relative;
-      padding: 25px;
-      background: black;
-    }
-
-    #sec2 h2 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    #sec2 p {
-      font-size: 1em;
-      color: #fff;
-    }
-
-    #sec3 {
-      position: relative;
-      padding: 25px;
-      background: black;
-    }
-
-    #sec3 h2 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    #sec3 p {
-      font-size: 1em;
-      color: #fff;
-    }
-
-    #sec4 {
-      position: relative;
-      padding: 25px;
-      background: black;
-    }
-
-    #sec4 h2 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    #sec4 p {
-      font-size: 1em;
-      color: #fff;
-    }
+      #btntop {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background: #fff;
+        color: #2b1055;
+        font-size: 1.5em;
+        z-index: 999;
+        transform: translateY(100px);
+      }
 
 
-    .scroll-container {
-      height: 50px;
-    }
+      #sec {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
 
-    .carousel-primary,
-    .carousel-secondary {
-      left: 100%;
-      width: 200px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-    }
+      #sec h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
 
-    .carousel-primary img {
-      width: 200px;
-      margin-left: 2px;
-      border-radius: 14px;
-    }
+      #sec p {
+        font-size: 1em;
+        color: #fff;
+      }
 
-    .carousel-primary {
-      display: flex;
-      justify-content: space-around;
-      animation: scroll-horizontal 20s linear infinite;
-    }
+      #sec2 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
 
-    .carousel-secondary {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 1.5s;
-    }
+      #sec2 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
 
-    .carousel-third {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 3s;
-    }
+      #sec2 p {
+        font-size: 1em;
+        color: #fff;
+      }
 
-    .carousel-fourth {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 4.5s;
-    }
+      #sec3 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
 
-    .carousel-fifth {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 6s;
-    }
+      #sec3 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
 
-    .carousel-sixth {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 7.5s;
-    }
+      #sec3 p {
+        font-size: 1em;
+        color: #fff;
+      }
 
-    .carousel-seventh {
-      animation: scroll-horizontal 20s linear infinite;
-      animation-delay: 9s;
-    }
+      #sec4 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
 
-    @keyframes scroll-horizontal {
-      0% {
+      #sec4 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec4 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+
+      .scroll-container {
+        height: 50px;
+      }
+
+      .carousel-primary,
+      .carousel-secondary {
         left: 100%;
+        width: 200px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
       }
 
-      100% {
-        left: -100%;
+      .carousel-primary img {
+        width: 200px;
+        margin-left: 2px;
+        border-radius: 14px;
+      }
+
+      .carousel-primary {
+        display: flex;
+        justify-content: space-around;
+        animation: scroll-horizontal 20s linear infinite;
+      }
+
+      .carousel-secondary {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 1.5s;
+      }
+
+      .carousel-third {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 3s;
+      }
+
+      .carousel-fourth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 4.5s;
+      }
+
+      .carousel-fifth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 6s;
+      }
+
+      .carousel-sixth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 7.5s;
+      }
+
+      .carousel-seventh {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 9s;
+      }
+
+      @keyframes scroll-horizontal {
+        0% {
+          left: 100%;
+        }
+
+        100% {
+          left: -100%;
+        }
+      }
+
+      .carousel-primary:hover,
+      .carousel-primary:hover~.carousel-secondary {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      .carousel-secondary:hover {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+
+      .scroll-container:hover>.carousel-primary:not(:hover) {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
       }
     }
 
-    .carousel-primary:hover,
-    .carousel-primary:hover~.carousel-secondary {
-      -webkit-animation-play-state: paused;
-      -moz-animation-play-state: paused;
-      -o-animation-play-state: paused;
-      animation-play-state: paused;
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(#000000, #3e4044);
+        overflow-x: hidden;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      header .logo {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header ul li {
+        list-style: none;
+        margin-left: 20px;
+      }
+
+      header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: #fff;
+        border-radius: 20px;
+      }
+
+      header ul li a:hover,
+      header ul li a.active {
+        background: #fff;
+        color: #2b1055;
+      }
+
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      section::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #1c0522, transparent);
+        z-index: 998;
+      }
+
+      section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      section img#moon {
+        mix-blend-mode: screen;
+      }
+
+      section img#mountains_front {
+        z-index: 10;
+      }
+
+      #text {
+        position: absolute;
+        right: -350px;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 7.5vw;
+        z-index: 9;
+      }
+
+      #btn {
+
+        z-index: 999;
+        transform: translateY(100px);
+      }
+
+      #btntop {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background: #fff;
+        color: #2b1055;
+        font-size: 1.5em;
+        z-index: 999;
+        transform: translateY(100px);
+      }
+
+
+      #sec {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec2 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec2 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec2 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec3 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec3 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec3 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec4 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec4 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec4 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+
+      .scroll-container {
+        height: 50px;
+      }
+
+      .carousel-primary,
+      .carousel-secondary {
+        left: 100%;
+        width: 200px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+      }
+
+      .carousel-primary img {
+        width: 200px;
+        margin-left: 2px;
+        border-radius: 14px;
+      }
+
+      .carousel-primary {
+        display: flex;
+        justify-content: space-around;
+        animation: scroll-horizontal 20s linear infinite;
+      }
+
+      .carousel-secondary {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 1.5s;
+      }
+
+      .carousel-third {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 3s;
+      }
+
+      .carousel-fourth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 4.5s;
+      }
+
+      .carousel-fifth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 6s;
+      }
+
+      .carousel-sixth {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 7.5s;
+      }
+
+      .carousel-seventh {
+        animation: scroll-horizontal 20s linear infinite;
+        animation-delay: 9s;
+      }
+
+      @keyframes scroll-horizontal {
+        0% {
+          left: 100%;
+        }
+
+        100% {
+          left: -100%;
+        }
+      }
+
+      .carousel-primary:hover,
+      .carousel-primary:hover~.carousel-secondary {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      .carousel-secondary:hover {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+
+      .scroll-container:hover>.carousel-primary:not(:hover) {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
     }
 
-    .carousel-secondary:hover {
-      -webkit-animation-play-state: paused;
-      -moz-animation-play-state: paused;
-      -o-animation-play-state: paused;
-      animation-play-state: paused;
-    }
+    @media only screen and (min-width: 0px) and (max-width: 767px) {
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(#000000, #3e4044);
+        overflow-x: hidden;
+      }
+
+      header {
+        position: absolute;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      header .logo {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header ul li {
+        list-style: none;
+        margin-left: 20px;
+      }
+
+      header ul li a {
+        text-decoration: none;
+        padding: 3px 7px;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      header ul li a:hover,
+      header ul li a.active {
+        background: #fff;
+        color: #2b1055;
+      }
+
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      section::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #1c0522, transparent);
+        z-index: 998;
+      }
+
+      section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+
+      section img#moon {
+        mix-blend-mode: screen;
+      }
+
+      section img#mountains_front {
+        z-index: 10;
+      }
+
+      #text {
+        position: absolute;
+        right: -1550px;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 7.5vw;
+        z-index: 9;
+      }
+
+      #btn {
+
+        z-index: 999;
+        transform: translateY(100px);
+      }
+
+      #btntop {
+        text-decoration: none;
+        display: inline-block;
+        width: 400px;
+        margin: 5px;
+        padding: 4px 15px;
+        border-radius: 20px;
+        background: #fff;
+        text-align: center;
+        color: #000000;
+        font-size: 1.5em;
+        z-index: 999;
+        transform: translateY(100px);
+      }
 
 
-    .scroll-container:hover>.carousel-primary:not(:hover) {
-      -webkit-animation-play-state: paused;
-      -moz-animation-play-state: paused;
-      -o-animation-play-state: paused;
-      animation-play-state: paused;
+      #sec {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec2 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec2 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec2 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec3 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec3 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec3 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+      #sec4 {
+        position: relative;
+        padding: 25px;
+        background: black;
+      }
+
+      #sec4 h2 {
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      #sec4 p {
+        font-size: 1em;
+        color: #fff;
+      }
+
+
+      .scroll-container {
+        height: 50px;
+      }
+
+      .carousel-primary,
+      .carousel-secondary {
+        left: 100%;
+        width: 200px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+      }
+
+      .carousel-primary img {
+        width: 200px;
+        margin-left: 2px;
+        border-radius: 14px;
+      }
+
+      .carousel-primary {
+        display: flex;
+        justify-content: space-around;
+        animation: scroll-horizontal 18s linear infinite;
+      }
+
+      .carousel-secondary {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 6s;
+      }
+
+      .carousel-third {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 12s;
+      }
+
+      .carousel-fourth {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 18s;
+      }
+
+      .carousel-fifth {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 24s;
+      }
+
+      .carousel-sixth {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 30s;
+      }
+
+      .carousel-seventh {
+        animation: scroll-horizontal 18s linear infinite;
+        animation-delay: 36s;
+      }
+
+      @keyframes scroll-horizontal {
+        0% {
+          left: 100%;
+        }
+
+        100% {
+          left: -100%;
+        }
+      }
+
+      .carousel-primary:hover,
+      .carousel-primary:hover~.carousel-secondary {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      .carousel-secondary:hover {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+
+      .scroll-container:hover>.carousel-primary:not(:hover) {
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        animation-play-state: paused;
+      }
     }
   </style>
   <!-- Required meta tags -->
@@ -314,7 +891,6 @@
   <!-- animation Css -->
   <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
   <!-- Responsive css -->
-  <link rel="stylesheet" href="./assets2/css/responsive.css" />
 </head>
 
 <body>
@@ -345,33 +921,36 @@
     <img src="http://codingstella.com/wp-content/uploads/2024/01/download-7.png" id="mountains_front">
 
   </section>
-
-  <div class="sec" id="sec">
-    <div class="scroll-container">
-      <div style="cursor: pointer"  class="carousel-primary">
-        <img  onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')"  src="./assets2/images/crushbanner.jpg">
+  <div style="background-color: black; " class="scroll-container">
+    <div style="cursor: pointer" class="carousel-primary">
+      <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
 
 
-      </div>
-      <div style="cursor: pointer" class="carousel-primary carousel-secondary">
-        <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
-      </div>
-      <div style="cursor: pointer" class="carousel-primary carousel-secondary carousel-third">
-        <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')"src="./assets2/images/fundamismbanner.jpg">
-      </div>
-      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth">
-        <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
-      </div>
-      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth">
-        <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
-      </div>
-      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth">
-        <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')"src="./assets2/images/fundamismbanner.jpg">
-      </div>
-      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth carousel-seventh">
-        <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
-      </div>
     </div>
+    <div style="cursor: pointer" class="carousel-primary carousel-secondary">
+      <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
+    </div>
+    <div style="cursor: pointer" class="carousel-primary carousel-secondary carousel-third">
+      <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')" src="./assets2/images/fundamismbanner.jpg">
+    </div>
+    <div style="cursor: pointer" class="carousel-primary carousel-secondary carousel-third carousel-fourth">
+      <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
+    </div>
+    <div style="cursor: pointer"
+      class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth">
+      <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
+    </div>
+    <div style="cursor: pointer"
+      class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth">
+      <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')" src="./assets2/images/fundamismbanner.jpg">
+    </div>
+    <div style="cursor: pointer"
+      class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth carousel-seventh">
+      <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
+    </div>
+  </div>
+  <div class="sec" id="sec">
+
     <h2>About</h2>
     <p>
       Want to play against the best?
