@@ -9,12 +9,15 @@
 	    margin-right: 10px;
 	}
 	.d2c_hero .d2c_hero_title {
-	    font-size: 32px;
+	    font-size: 40px;
 		margin-top: 20px;
 	}
 	.d2c_hero .d2c_hero_img {
-	    position: relative;
-	    width: 100%;
+	    position: absolute;
+	    width: 40%;
+	}
+	.d2c_hero {	    
+		height: 60vh;
 	}
 }
 
@@ -29,14 +32,14 @@
 	    margin-right: 10px;
 	}
 	.d2c_hero {	    
-		height: 70vh;
+		height: 50vh;
 	}
 	.d2c_hero .d2c_hero_title {
 	    font-size: 32px;
 	}
 	.d2c_hero .d2c_hero_img {
 	    position: relative;
-	    width: 100%;
+	    width: 70%;
 	}
 }
 
@@ -44,10 +47,14 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
 	.d2c_hero {	    
-		height: 80vh;
+		height: 50vh;
 	}
 	.d2c_hero .d2c_hero_title {
 	    font-size: 42px;
+	}
+	.d2c_hero .d2c_hero_img {
+	    position: relative;
+	    width: 70%;
 	}
 }
 
