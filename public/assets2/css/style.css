@@ -13,7 +13,7 @@
     background: var(--primary_color);
     color: #FFFFFF;
 }
-.btn{
+/* .btn{
 	border-radius: 2px;
 	padding: 7px 30px;
 	font-family: var(--primary_font);
@@ -24,7 +24,7 @@
 	transition: 0.4s all;
 	overflow: hidden;
 	margin-right: 10px;
-}
+} */
 .btn.d2c_primary_btn{
 	background-color: var(--secondary_color);
 	transition: 0.4s all;
