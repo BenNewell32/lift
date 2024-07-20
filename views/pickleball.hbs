@@ -17,7 +17,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(#2b1055, #7597de);
+      background: linear-gradient(#000000, #3e4044);
       overflow-x: hidden;
     }
 
@@ -84,7 +84,7 @@
       width: 100%;
       height: 100px;
       background: linear-gradient(to top, #1c0522, transparent);
-      z-index: 1000;
+      z-index: 998;
     }
 
     section img {
@@ -135,8 +135,8 @@
 
     #sec {
       position: relative;
-      padding: 100px;
-      background: #1c0522;
+      padding: 25px;
+      background: black;
     }
 
     #sec h2 {
@@ -150,10 +150,10 @@
       color: #fff;
     }
 
-        #sec2 {
+    #sec2 {
       position: relative;
-      padding: 100px;
-      background: #1c0522;
+      padding: 25px;
+      background: black;
     }
 
     #sec2 h2 {
@@ -167,10 +167,10 @@
       color: #fff;
     }
 
-        #sec3 {
+    #sec3 {
       position: relative;
-      padding: 100px;
-      background: #1c0522;
+      padding: 25px;
+      background: black;
     }
 
     #sec3 h2 {
@@ -182,6 +182,112 @@
     #sec3 p {
       font-size: 1em;
       color: #fff;
+    }
+
+    #sec4 {
+      position: relative;
+      padding: 25px;
+      background: black;
+    }
+
+    #sec4 h2 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    #sec4 p {
+      font-size: 1em;
+      color: #fff;
+    }
+
+
+    .scroll-container {
+      height: 50px;
+    }
+
+    .carousel-primary,
+    .carousel-secondary {
+      left: 100%;
+      width: 200px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+    }
+
+    .carousel-primary img {
+      width: 200px;
+      margin-left: 2px;
+      border-radius: 14px;
+    }
+
+    .carousel-primary {
+      display: flex;
+      justify-content: space-around;
+      animation: scroll-horizontal 20s linear infinite;
+    }
+
+    .carousel-secondary {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 1.5s;
+    }
+
+    .carousel-third {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 3s;
+    }
+
+    .carousel-fourth {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 4.5s;
+    }
+
+    .carousel-fifth {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 6s;
+    }
+
+    .carousel-sixth {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 7.5s;
+    }
+
+    .carousel-seventh {
+      animation: scroll-horizontal 20s linear infinite;
+      animation-delay: 9s;
+    }
+
+    @keyframes scroll-horizontal {
+      0% {
+        left: 100%;
+      }
+
+      100% {
+        left: -100%;
+      }
+    }
+
+    .carousel-primary:hover,
+    .carousel-primary:hover~.carousel-secondary {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+    .carousel-secondary:hover {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+
+    .scroll-container:hover>.carousel-primary:not(:hover) {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
     }
   </style>
   <!-- Required meta tags -->
@@ -226,26 +332,102 @@
 
   <section>
     <img src="http://codingstella.com/wp-content/uploads/2024/01/download-4.png" id="stars">
-    <img src="https://iili.io/dnTTIt9.png" id="moon">
+    <img src="https://iili.io/dnuIIKG.png" id="moon">
     <img src="http://codingstella.com/wp-content/uploads/2024/01/download-6.png" id="mountains_behind">
-    <h2 style="font-weight:bold" id="text">PLAY &nbsp;&nbsp; FEARLESS</h2>
+    <h1 style="font-weight:bold; font-size: 185px" id="text">PLAY &nbsp;&nbsp; FEARLESS</h1>
     <div id="btn">
-      <a id="btntop" href="#sec">Lessons</a>
-      <a id="btntop" href="#sec2">Launch Academy</a>
-
-      <a id="btntop" href="#sec3">B-Bombs App</a>
+      <a id="btntop" onclick="bbombs(0)" href="#sec">About</a>
+      <a id="btntop" onclick="bbombs(1)" href="#sec2">Lessons</a>
+      <a id="btntop" onclick="bbombs(2)" href="#sec3">Launch Academy</a>
+      <a id="btntop" onclick="bbombs(3)" href="#sec4">B-Bombs App</a>
     </div>
+
     <img src="http://codingstella.com/wp-content/uploads/2024/01/download-7.png" id="mountains_front">
+
   </section>
 
   <div class="sec" id="sec">
+    <div class="scroll-container">
+      <div style="cursor: pointer"  class="carousel-primary">
+        <img  onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')"  src="./assets2/images/crushbanner.jpg">
+
+
+      </div>
+      <div style="cursor: pointer" class="carousel-primary carousel-secondary">
+        <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
+      </div>
+      <div style="cursor: pointer" class="carousel-primary carousel-secondary carousel-third">
+        <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')"src="./assets2/images/fundamismbanner.jpg">
+      </div>
+      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth">
+        <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
+      </div>
+      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth">
+        <img onclick="window.open('https://thehubpickleball.com/', 'The Hub')" src="./assets2/images/hubbanner.jpg">
+      </div>
+      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth">
+        <img onclick="window.open('https://www.fundamism.com/', 'Fundamism')"src="./assets2/images/fundamismbanner.jpg">
+      </div>
+      <div class="carousel-primary carousel-secondary carousel-third carousel-fourth carousel-fifth carousel-sixth carousel-seventh">
+        <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
+      </div>
+    </div>
+    <h2>About</h2>
+    <p>
+      Want to play against the best?
+    </p>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+          style="background-image: url('https://iili.io/dnu6g3B.png');box-shadow: 10px 10px 5px #494848">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Top #20 Men's Doubles</h3>
+            <h3>2023</h3>
+
+          </div>
+          <img style="width: 100%" src="./assets2/images/ppabanner.png" alt="Hero Image">
+
+        </div>
+
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4"
+          style="background-size: contain; background-image: url('https://iili.io/dnu6dqQ.png');box-shadow: 10px 10px 5px #494848">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">MLP Challenger Champion</h3>
+            <h3>2023</h3>
+
+
+          </div>
+          <img style="width: 100%" src="./assets2/images/mlpbanner.png" alt="Hero Image">
+
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 "
+          style="background-size: contain;background-image: url('');box-shadow: 10px 10px 5px #494848">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">APP NY Mens Doubles Finalist</h3>
+            <h3>2024 </h3>
+
+
+          </div>
+          <img style="width: 100%" src="./assets2/images/appbanner.png" alt="Hero Image">
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <div class="sec" id="sec2" style="display: none">
     <h2>Lessons</h2>
     <p>
-      Find success in all sports by focusing on your athletisim! Pickleball is such a netrualizing sport with a small
-      court, light ball, and light racket. This allows kids to focus on being athletic rather than restricting
-      themeselves because of a lack of strength or movement.
-
-      Your kids will go through drills that allow them to push their limits, to create, and to grow quickly!
+      Want to play against the best?
     </p>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
@@ -294,7 +476,7 @@
 
 
   </div>
-  <div class="sec" id="sec2">
+  <div class="sec" id="sec3" style="display: none">
     <h2>Launch Academy</h2>
     <p>
       Find success in all sports by focusing on your athletisim! Pickleball is such a netrualizing sport with a small
@@ -336,7 +518,7 @@
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 "
           style="background-size: contain;background-image: url('');box-shadow: 10px 10px 5px lightgray">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">FEARLESS  </h3>
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">FEARLESS </h3>
             <h3>Training</h3>
 
           </div>
@@ -348,12 +530,13 @@
     </div>
 
   </div>
-<div class="sec" id="sec3">
+  <div class="sec" id="sec4" style="display: none">
     <h2>B-Bombs App</h2>
     <p>
-      Need help with your pickleball ASAP?? This app will provide you with over 20hrs of videos for the price of 1/2 a lesson! 
+      Need help with your pickleball ASAP?? This app will provide you with over 20hrs of videos for the price of 1/2 a
+      lesson!
 
-      
+
     </p>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
@@ -388,7 +571,7 @@
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 "
           style="background-size: contain;background-image: url('');box-shadow: 10px 10px 5px lightgray">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">FEARLESS  </h3>
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">FEARLESS </h3>
             <h3>Training</h3>
 
           </div>
@@ -400,6 +583,7 @@
     </div>
 
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
@@ -430,6 +614,32 @@
       header.style.top = value * 0.5 + 'px';
     });
 
+    function bbombs(sec) {
+      if (sec === 0) {
+        document.getElementById('sec').style.display = 'block'
+        document.getElementById('sec2').style.display = 'none'
+        document.getElementById('sec3').style.display = 'none'
+        document.getElementById('sec4').style.display = 'none'
+      }
+      else if (sec === 1) {
+        document.getElementById('sec').style.display = 'none'
+        document.getElementById('sec2').style.display = 'block'
+        document.getElementById('sec3').style.display = 'none'
+        document.getElementById('sec4').style.display = 'none'
+      }
+      else if (sec === 2) {
+        document.getElementById('sec').style.display = 'none'
+        document.getElementById('sec2').style.display = 'none'
+        document.getElementById('sec3').style.display = 'block'
+        document.getElementById('sec4').style.display = 'none'
+      }
+      else if (sec === 3) {
+        document.getElementById('sec').style.display = 'none'
+        document.getElementById('sec2').style.display = 'none'
+        document.getElementById('sec3').style.display = 'none'
+        document.getElementById('sec4').style.display = 'block'
+      }
+    }
 
   </script>
 

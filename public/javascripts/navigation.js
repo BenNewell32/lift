@@ -1,6 +1,18 @@
-// function route(){
-//   alert(location)
-// }
+function bbombs(sec){
+  alert('ran')
+ if (sec===0){
+  alert(sec)
+ }
+ else if (sec===1){
+  alert(sec)
+ }
+ else if (sec===2){
+  alert(sec)
+ }
+ else if (sec===3){
+  alert(sec)
+ }
+}
 
 function yana() {
   var x = document.getElementById("yana");
