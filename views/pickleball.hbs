@@ -94,12 +94,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         pointer-events: none;
       }
 
       section img#moon {
         mix-blend-mode: screen;
+
       }
 
       section img#mountains_front {
@@ -108,7 +109,7 @@
 
       #text {
         position: absolute;
-        right: -350px;
+        right: -1820px;
         color: #fff;
         white-space: nowrap;
         font-size: 7.5vw;
@@ -125,12 +126,12 @@
         text-decoration: none;
         display: inline-block;
         padding: 8px 30px;
+        margin: 5px;
         border-radius: 40px;
         background: #fff;
         color: #2b1055;
-        font-size: 1.5em;
+        font-size: 1em;
         z-index: 999;
-        transform: translateY(100px);
       }
 
 
@@ -696,16 +697,14 @@
       #btntop {
         text-decoration: none;
         display: inline-block;
-        width: 400px;
         margin: 5px;
         padding: 4px 15px;
         border-radius: 20px;
         background: #fff;
         text-align: center;
         color: #000000;
-        font-size: 1.5em;
-        z-index: 999;
-        transform: translateY(100px);
+        font-size: 1em;
+        z-index: 997;
       }
 
 
@@ -895,7 +894,7 @@
 
 <body>
   <!-- partial:index.partial.html -->
-  <header>
+  {{!-- <header>
     <a href="#" class="logo">&nbsp;</a>
     <ul>
       <li><a href="/">Lift LLC</a></li>
@@ -904,24 +903,78 @@
       <li><a href="#">Pro Tour</a></li>
     </ul>
 
-  </header>
+  </header> --}}
 
-  <section>
-    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-4.png" id="stars">
-    <img src="https://iili.io/dnuIIKG.png" id="moon">
-    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-6.png" id="mountains_behind">
-    <h1 style="font-weight:bold; font-size: 185px" id="text">PLAY &nbsp;&nbsp; FEARLESS</h1>
-    <div id="btn">
-      <a id="btntop" onclick="bbombs(0)" href="#sec">About</a>
-      <a id="btntop" onclick="bbombs(1)" href="#sec2">Lessons</a>
-      <a id="btntop" onclick="bbombs(2)" href="#sec3">Launch Academy</a>
-      <a id="btntop" onclick="bbombs(3)" href="#sec4">B-Bombs App</a>
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" style="z-index: 1000" data-bs-theme="dark">
+    <div class="container-fluid" style="z-index: 1000">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="z-index: 1000" class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Lift KC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Benny Bombs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Yana Bear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pro Tour</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pickle Podz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Generation Sports Construction</a>
+          </li>
+
+        </ul>
+      </div>
     </div>
 
-    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-7.png" id="mountains_front">
+  </nav>
+  <div class=" sticky-top "
+    style="cursor: none; width: 100vw; height: 50px; margin-top: 72px; position: fixed; background-color: #00000000; z-index: 999"
+    data-bs-theme="dark">
+    <div class="container-fluid">
+
+      <row>
+
+        <col class="nav-item">
+        <a class="nav-link active" id="btntop" onclick="bbombs(1)" href="#ads">Lessons</a>
+        </col>
+        <col class="nav-item">
+        <a class="nav-link" id="btntop" onclick="bbombs(2)" href="#ads">Launch Academy</a>
+        </col>
+        <col class="nav-item">
+        <a class="nav-link" id="btntop" onclick="bbombs(3)" href="#ads">B-Bombs App</a>
+        </col>
+        <col class="nav-item">
+        <a class="nav-link" id="btntop" onclick="bbombs(3)" href="#ads">Sponsors</a>
+        </col>
+        <col class="nav-item">
+        <a class="nav-link" id="btntop" onclick="bbombs(0)" href="#ads">About</a>
+        </col>
+      </row>
+    </div>
+  </div>
+  <section >
+    <img src="http://codingstella.com/wp-content/uploads/2024/01/download-4.png" id="stars">
+    <img src="https://iili.io/dnuIIKG.png" id="moon">
+    {{!-- <img src="http://codingstella.com/wp-content/uploads/2024/01/download-6.png" id="mountains_behind"> --}}
+    <img src="https://iili.io/dnVxCvV.md.png" id="mountains_behind">
+    <h1 style="font-weight:bold; font-size: 185px" id="text">PLAY &nbsp;&nbsp; FEARLESS</h1>
+
+    {{!-- <img src="http://codingstella.com/wp-content/uploads/2024/01/download-7.png" id="mountains_front"> --}}
+    <img src="https://iili.io/dnVxVGs.png" id="mountains_front">
 
   </section>
-  <div style="background-color: black; " class="scroll-container">
+  <div id="ads" style="background-color: black; " class="scroll-container">
     <div style="cursor: pointer" class="carousel-primary">
       <img onclick="window.open('https://www.crushpickleball.com/', 'CRUSH')" src="./assets2/images/crushbanner.jpg">
 
