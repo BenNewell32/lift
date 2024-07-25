@@ -15,6 +15,7 @@ var yanabearRouter = require("./routes/yanabear");
 var protourRouter = require("./routes/protour");
 
 var picklepodzRouter = require("./routes/picklepodz");
+var picklepodzllcRouter = require("./routes/picklepodzllc");
 var projectsRouter = require("./routes/projects");
 var liftInsightsRouter = require("./routes/liftinsights");
 var addImagesRouter = require("./routes/addImages");
@@ -42,6 +43,8 @@ app.use("/yanabear", yanabearRouter);
 app.use("/protour", protourRouter);
 
 app.use("/picklepodz", picklepodzRouter);
+app.use("/picklepodzllc", picklepodzllcRouter);
+
 app.use("/api", apiRouter);
 app.use("/projects", projectsRouter);
 app.use("/liftinsights", liftInsightsRouter);
