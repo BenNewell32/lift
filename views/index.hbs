@@ -283,7 +283,7 @@
               <h4 style="color: #f64243">(React.JS)</h4>
               <p>Fully customized web application for live scoring!</p>
               <div class="main-red-button">
-                <a href="https://scores.majorleaguepickleball.net/">View on Mobile!</a>
+                <a onclick="checkdevise('Mobile')" href="https://scores.majorleaguepickleball.net/">View on Mobile!</a>
               </div>
 
             </div>
@@ -302,7 +302,7 @@
               <h4 style="color: #0da0e4">(BI Dev & Consultation)</h4>
               <p>Tableau development and training!</p>
               <div class="main-blue-button">
-                <a href="https://stateofthestates.ku.edu/chart-creator">View on Desktop!</a>
+                <a onclick="checkdevise('Desktop')" href="https://stateofthestates.ku.edu/chart-creator">View on Desktop!</a>
               </div>
             </div>
           </div>
@@ -502,9 +502,18 @@ function isMobile() {
 }
 
 if (isMobile()) {
+  var deviseType;
   alert("Mobile device detected");
+  deviseType='Mobile'
 } else {
   alert("Desktop device detected");
+  deviseType='Desktop'
+}
+
+function checkdevise(devise){
+  if (devise!=deviseType){
+    alert("You are not utilizing the recomended device!")
+  }
 }
 isMobile();
 </script>
