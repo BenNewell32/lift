@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets3/css/templatemo-space-dynamic.css">
   <link rel="stylesheet" href="assets3/css/animated.css">
   <link rel="stylesheet" href="assets3/css/owl.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -85,7 +85,7 @@
                 <h2>Empowering <em>B.I.</em> &amp; <span>Full Stack </span> Development
                 </h2>
                 <p>Ben Newell here! Thank you for navigating to my page. My goal is to empower companies and small
-                  businesses with simple, efficent applications and analytics.</p>
+                  businesses with simple, efficient applications and analytics.</p>
                 {{!-- <form id="search" action="#" method="GET">
                   <fieldset>
                     <input type="address" name="address" class="email" placeholder="Your website URL..."
@@ -128,7 +128,7 @@
                   <div class="right-text">
                     <h4>Data Storage</h4>
                     <p>Data storage can be complex whether you are working with EDWs, SQL or NoSQL datbases, or Excel
-                      files. Let's make sure your data is stored and access correctly and securely! </p>
+                      files. Let's make sure your data is stored and accessed correctly and securely! </p>
                   </div>
                 </div>
               </div>
@@ -152,8 +152,8 @@
                       src="assets3/images/apiicon.png" alt="">
                   </div>
                   <div class="right-text">
-                    <h4>Data Retrival</h4>
-                    <p>Automation and simplicity is the goal. Lets find ways to access your data quickly, allowing your
+                    <h4>Data Retrieval</h4>
+                    <p>Automation and simplicity is the goal. Let's find ways to access your data quickly, allowing your
                       team to get to the analytics faster. In most cases we'll use the industry standard, APIs!.</p>
                   </div>
                 </div>
@@ -196,6 +196,9 @@
                     <h4>Embedded Analytics</h4>
                     <p>Need your analytics to be accessed in a web or mobile app? I love the challenge of merging
                       Analytics with Web Development to create a user experience worth adopting!</p>
+                    <div>
+                      <canvas id="myChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -206,51 +209,7 @@
     </div>
   </div>
 
-  {{!-- <div id="services" class="our-services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="left-image">
-            <img src="assets3/images/services-left-image.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-          <div class="section-heading">
-            <h2>Grow your website with our <em>SEO</em> service &amp; <span>Project</span> Ideas</h2>
-            <p>Space Dynamic HTML5 template is free to use for your website projects. However, you are not permitted to
-              redistribute the template ZIP file on any CSS template collection websites. Please contact us for more
-              information. Thank you for your kind cooperation.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="first-bar progress-skill-bar">
-                <h4>Website Analysis</h4>
-                <span>84%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="second-bar progress-skill-bar">
-                <h4>SEO Reports</h4>
-                <span>88%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="third-bar progress-skill-bar">
-                <h4>Page Optimizations</h4>
-                <span>94%</span>
-                <div class="filled-bar"></div>
-                <div class="full-bar"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
+
 
   <div id="portfolio" class="our-portfolio section">
     <div class="container">
@@ -298,119 +257,12 @@
             </div>
           </a>
         </div>
-        {{!-- <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="hidden-content">
-                <h4>Performance Tests</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets3/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-              <div class="hidden-content">
-                <h4>Data Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets3/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div> --}}
+
       </div>
     </div>
   </div>
 
-  {{!-- <div id="blog" class="our-blog section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="section-heading">
-            <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="top-dec">
-            <img src="assets3/images/blog-dec.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="left-image">
-            <a href="#"><img src="assets3/images/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
-            <div class="info">
-              <div class="inner-content">
-                <ul>
-                  <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
-                  <li><i class="fa fa-users"></i> TemplateMo</li>
-                  <li><i class="fa fa-folder"></i> Branding</li>
-                </ul>
-                <a href="#">
-                  <h4>SEO Agency &amp; Digital Marketing</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore
-                  magna...</p>
-                <div class="main-blue-button">
-                  <a href="#">Discover More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-          <div class="right-list">
-            <ul>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                  <a href="#">
-                    <h4>New Websites &amp; Backlinks</h4>
-                  </a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets3/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                  <a href="#">
-                    <h4>SEO Analysis &amp; Content Ideas</h4>
-                  </a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets3/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-              <li>
-                <div class="left-content align-self-center">
-                  <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                  <a href="#">
-                    <h4>SEO Tips &amp; Digital Marketing</h4>
-                  </a>
-                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets3/images/blog-thumb-01.jpg" alt=""></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> --}}
-  
+
   <div class="scroller" data-direction="right" data-speed="fast">
     <div style="text-align: center; justify-content: center; align-items: center;" class="container">
       <div style="text-align: center; justify-content: center; align-items: center;" class="row">
@@ -435,7 +287,7 @@
       <img class="scrollingcompanies" src="assets3/images/scrollreact.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollsqlserver.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrolltableau.png" alt="" />
-      
+
       <img class="scrollingcompanies" src="assets3/images/scrollblank.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollcss.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollfirebase.png" alt="" />
@@ -449,7 +301,7 @@
       <img class="scrollingcompanies" src="assets3/images/scrollreact.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollsqlserver.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrolltableau.png" alt="" />
-   
+
       <img class="scrollingcompanies" src="assets3/images/scrollblank.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollcss.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollfirebase.png" alt="" />
@@ -483,6 +335,7 @@
       <img class="scrollingcompanies" src="assets3/images/scrollmlp.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollaci.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollppl.png" alt="" />
+      <img class="scrollingcompanies" src="assets3/images/scrollku.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollblank.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollbcbs.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollfbkc.png" alt="" />
@@ -490,6 +343,7 @@
       <img class="scrollingcompanies" src="assets3/images/scrollmlp.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollaci.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollppl.png" alt="" />
+      <img class="scrollingcompanies" src="assets3/images/scrollku.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollblank.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollbcbs.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollfbkc.png" alt="" />
@@ -497,6 +351,8 @@
       <img class="scrollingcompanies" src="assets3/images/scrollmlp.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollaci.png" alt="" />
       <img class="scrollingcompanies" src="assets3/images/scrollppl.png" alt="" />
+      <img class="scrollingcompanies" src="assets3/images/scrollku.png" alt="" />
+
     </div>
   </div>
   <div id="contact" class="contact-us section">
@@ -504,11 +360,10 @@
       <div class="row">
         <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <div class="section-heading">
-            <h2>Contact Me About Your BI & Web Development Needs</h2>
-            {{!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut
-              labore et dolores</p> --}}
+            <h2>Contact Me Today!</h2>
+
             <div class="phone-info">
-              <h4>For any inquiry, reach me at:</h4>
+              <h4>LIFT your business, fast and simple.</h4>
               <h4 href="sms:(1)(7856335715)" style="padding: 2px"><span><i class="fa fa-phone"
                     href="sms:(1)(7856335715)"></i> <a href="sms:(1)(7856335715)">Text: +785-633-5715 </a></span></h4>
               <h4 style="padding: 2px"><span><i class="fa fa-envelope" href="mailto: ben.m.newell@gmail.com"></i> <a
@@ -516,42 +371,7 @@
             </div>
           </div>
         </div>
-        {{!-- <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                    required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
-                    required=""></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-                </fieldset>
-              </div>
-            </div>
-            <div class="contact-dec">
-              <img src="assets3/images/contact-decoration.png" alt="">
-            </div>
-          </form>
-        </div> --}}
+
       </div>
     </div>
   </div>
@@ -572,7 +392,54 @@
   <script src="assets3/js/animation.js"></script>
   <script src="assets3/js/imagesloaded.js"></script>
   <script src="assets3/js/templatemo-custom.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart');
 
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: '# of Bugs',
+
+          data: [12, 19, 3, 5, 20, 22],
+          borderWidth: 4,
+          borderColor: 'white',
+          backgroundColor: '#1d80c1',
+          radius: 7
+        }]
+      },
+      options: {
+        plugins: {  // 'legend' now within object 'plugins {}'
+          legend: {
+            labels: {
+              color: "white",  // not 'fontColor:' anymore
+              // fontSize: 18  // not 'fontSize:' anymore
+
+            }
+          }
+        },
+        scales: {
+          y: {
+            grid: {
+              color: 'white'
+            },
+            ticks: {
+              color: 'white'
+            }
+          },
+          x: {
+            grid: {
+              color: 'white'
+            },
+            ticks: {
+              color: 'white'
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
