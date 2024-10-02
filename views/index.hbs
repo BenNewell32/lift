@@ -496,9 +496,17 @@
     });
   </script>
 <script>
-if (typeof screen.orientation !== 'undefined') { alert('desktop') }
-else {alert('mobile')}
+function isMobile() {
+  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  return regex.test(navigator.userAgent);
+}
 
+if (isMobile()) {
+  alert("Mobile device detected");
+} else {
+  alert("Desktop device detected");
+}
+isMobile();
 </script>
 
 </body>
