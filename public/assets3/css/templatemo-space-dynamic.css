@@ -204,6 +204,20 @@ body {
   color: #fff;
   text-transform: capitalize;
   padding: 12px 25px;
+  margin: 12px 12px;
+  border-radius: 23px;
+  letter-spacing: 0.25px;
+}
+
+.main-link-button a {
+  display: inline-block;
+  background-color: #03a4ed;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  text-transform: capitalize;
+  padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
 }
@@ -1102,6 +1116,12 @@ Portfolio
   visibility: visible;
 }
 
+.testimonial .item:hover .hidden-content {
+  top: -100px;
+  opacity: 1;
+  visibility: visible;
+}
+
 .our-portfolio .item:hover .showed-content {
   top: 90px;
 }
@@ -1121,8 +1141,8 @@ Portfolio
 }
 
 .our-portfolio .hidden-content:after {
-  width: 20px;
-  height: 20px;
+  width: 0px;
+  height: 0px;
   position: absolute;
   background: rgb(255,77,30);
   content: '';
